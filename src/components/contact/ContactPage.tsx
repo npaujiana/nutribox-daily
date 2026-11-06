@@ -43,13 +43,10 @@ Mohon informasi dan panduan selanjutnya. Terima kasih.`;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero */}
         <div className="max-w-3xl mb-12 text-left">
-          <span className="text-xs font-semibold text-leaf mb-2 block">
-            Hubungi NutriBox Daily
-          </span>
           <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-forest tracking-tight">
-            Let’s make your lunch better.
+            Hubungi NutriBox Daily.
           </h1>
-          <p className="mt-3 text-base sm:text-lg text-ink-muted leading-relaxed">
+          <p className="mt-3 text-base sm:text-lg text-ink-2 leading-relaxed">
             Ada pertanyaan tentang menu, paket langganan, atau jangkauan kurir ke kantor Anda? Tim NutriBox Daily siap membantu.
           </p>
         </div>
@@ -58,25 +55,22 @@ Mohon informasi dan panduan selanjutnya. Terima kasih.`;
           {/* Left Column: Operational & Location Info (5 Cols) */}
           <div className="lg:col-span-5 space-y-6">
             {/* Kitchen & Location Info */}
-            <div className="bg-paper-elevated border border-rule-subtle rounded-3xl p-6 sm:p-8 shadow-xs">
+            <div className="bg-paper border border-rule rounded-xl p-6 sm:p-8 shadow-xs text-left">
               <div className="flex items-start gap-3.5 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-mint text-forest flex items-center justify-center shrink-0">
+                <div className="w-9 h-9 rounded-lg bg-paper-2 border border-rule-subtle text-forest flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5 text-leaf" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-semibold text-leaf block">
-                    Fasilitas produksi
-                  </span>
-                  <h3 className="font-display font-bold text-lg text-forest">
+                  <h2 className="font-display font-bold text-lg text-forest">
                     {config.location.name}
-                  </h3>
-                  <p className="text-xs text-ink-muted mt-1">
+                  </h2>
+                  <p className="text-xs text-ink-2 mt-1">
                     {config.location.city}, {config.location.province}, {config.location.country}.
                   </p>
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-2xl bg-paper-2 border border-rule-subtle text-xs text-ink-muted mb-4">
+              <div className="p-3.5 rounded-lg bg-paper-2 border border-rule-subtle text-xs text-ink-2 mb-4">
                 <p className="italic">{config.location.note}</p>
               </div>
 
@@ -84,7 +78,7 @@ Mohon informasi dan panduan selanjutnya. Terima kasih.`;
                 href={config.location.mapsQueryUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl border border-rule text-xs font-semibold text-forest hover:bg-mint active:scale-[0.99] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
+                className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg border border-rule text-xs font-semibold text-forest hover:bg-paper-2 active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
               >
                 <span className="whitespace-nowrap">Lihat kawasan di Google Maps</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-leaf" />
@@ -92,18 +86,18 @@ Mohon informasi dan panduan selanjutnya. Terima kasih.`;
             </div>
 
             {/* Operating Hours Table */}
-            <div className="bg-paper-elevated border border-rule-subtle rounded-3xl p-6 sm:p-8 shadow-xs space-y-4">
+            <div className="bg-paper border border-rule rounded-xl p-6 sm:p-8 shadow-xs space-y-4 text-left">
               <div className="flex items-center gap-2.5 pb-3 border-b border-rule-subtle">
                 <Clock className="w-5 h-5 text-leaf" />
-                <h4 className="font-display font-bold text-base text-forest">
+                <h3 className="font-display font-bold text-base text-forest">
                   Jadwal operasional resmi
-                </h4>
+                </h3>
               </div>
 
               <div className="space-y-3 text-xs">
                 <div>
                   <span className="font-bold text-forest block">Senin sampai Jumat:</span>
-                  <ul className="mt-1 space-y-1 text-ink-muted pl-2 border-l-2 border-leaf">
+                  <ul className="mt-1 space-y-1 text-ink-2 pl-2 border-l-2 border-leaf">
                     <li>Produksi dapur: 06.00 sampai 10.00 WIB</li>
                     <li>Pengiriman kurir: 10.30 sampai 11.45 WIB</li>
                     <li>Customer service: 08.00 sampai 17.00 WIB</li>
@@ -112,7 +106,7 @@ Mohon informasi dan panduan selanjutnya. Terima kasih.`;
 
                 <div>
                   <span className="font-bold text-forest block">Sabtu:</span>
-                  <ul className="mt-1 space-y-1 text-ink-muted pl-2 border-l-2 border-sage">
+                  <ul className="mt-1 space-y-1 text-ink-2 pl-2 border-l-2 border-sage">
                     <li>Customer service: 09.00 sampai 14.00 WIB</li>
                     <li>Tidak ada produksi dan pengantaran reguler</li>
                   </ul>
@@ -120,20 +114,20 @@ Mohon informasi dan panduan selanjutnya. Terima kasih.`;
 
                 <div>
                   <span className="font-bold text-forest block">Minggu dan hari libur nasional:</span>
-                  <p className="text-ink-muted mt-0.5">Tutup (Seluruh operasional libur)</p>
+                  <p className="text-ink-2 mt-0.5">Tutup (Seluruh operasional libur)</p>
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-rule-subtle text-[11px] text-ink-muted">
+              <div className="pt-3 border-t border-rule-subtle text-[11px] text-ink-2">
                 <span className="font-semibold text-forest">Batas Pre-Order:</span> H-1 pukul 17.00 WIB untuk pengiriman hari kerja berikutnya.
               </div>
             </div>
 
             {/* Contact Status Notice & Admin Gear */}
-            <div className="p-4 rounded-2xl bg-paper-2 border border-rule-subtle text-xs flex items-center justify-between">
+            <div className="p-4 rounded-lg bg-paper border border-rule text-xs flex items-center justify-between text-left">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-citrus"></span>
-                <span className="text-ink-muted">
+                <span className="text-ink-2">
                   WhatsApp:{' '}
                   {config.whatsapp.verified ? (
                     <strong className="text-forest">{config.whatsapp.number} (Terverifikasi)</strong>
@@ -145,7 +139,7 @@ Mohon informasi dan panduan selanjutnya. Terima kasih.`;
               <button
                 type="button"
                 onClick={onOpenConfig}
-                className="p-1.5 rounded-lg text-forest hover:bg-mint active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
+                className="p-1.5 rounded-lg text-forest hover:bg-paper-2 active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
                 title="Kelola Pengaturan Kontak"
                 aria-label="Buka pengaturan kontak"
               >
@@ -155,15 +149,12 @@ Mohon informasi dan panduan selanjutnya. Terima kasih.`;
           </div>
 
           {/* Right Column: Interactive Consultation & Order Form (7 Cols) */}
-          <div className="lg:col-span-7 bg-paper-elevated border border-rule rounded-3xl p-6 sm:p-8 shadow-xs">
+          <div className="lg:col-span-7 bg-paper border border-rule rounded-xl p-6 sm:p-8 shadow-xs text-left">
             <div className="pb-4 mb-6 border-b border-rule-subtle">
-              <span className="text-xs font-semibold text-leaf block mb-1">
-                Formulir komunikasi cepat
-              </span>
-              <h3 className="font-display font-bold text-2xl text-forest">
+              <h2 className="font-display font-bold text-2xl text-forest">
                 Kirim pesan ke customer service
-              </h3>
-              <p className="text-xs text-ink-muted mt-1">
+              </h2>
+              <p className="text-xs text-ink-2 mt-1">
                 Isi form di bawah untuk membuat format pesan otomatis yang langsung terhubung ke tim NutriBox Daily.
               </p>
             </div>

@@ -174,20 +174,22 @@ Terima kasih.`;
       />
 
       {/* Mobile Sticky Quick Bottom Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-30 lg:hidden bg-paper-elevated border-t border-rule-subtle py-2.5 px-4 flex items-center justify-between gap-3 shadow-md">
+      <div className="fixed bottom-0 left-0 right-0 z-30 lg:hidden bg-paper border-t border-rule py-2.5 px-4 flex items-center justify-between gap-3 shadow-md">
         <button
+          type="button"
           onClick={() => handleNavigate('catalog')}
-          className="flex-1 py-2 px-3 rounded-card-sm bg-paper-2 border border-rule text-forest font-semibold text-xs flex items-center justify-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
+          className="flex-1 py-2 px-3 rounded-lg bg-paper-2 border border-rule text-forest font-semibold text-xs flex items-center justify-center gap-1.5 active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
         >
-          <ShoppingBag className="w-3.5 h-3.5 text-fresh" />
+          <ShoppingBag className="w-3.5 h-3.5 text-leaf" />
           <span>Katalog Menu</span>
         </button>
 
         <button
+          type="button"
           onClick={() => handleOpenWhatsApp()}
-          className="flex-1 py-2 px-3 rounded-card-sm bg-forest text-accent-ink font-semibold text-xs flex items-center justify-center gap-1.5 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
+          className="flex-1 py-2 px-3 rounded-lg bg-forest text-white font-semibold text-xs flex items-center justify-center gap-1.5 shadow-xs active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf cursor-pointer"
         >
-          <MessageSquare className="w-3.5 h-3.5 text-fresh" />
+          <MessageSquare className="w-3.5 h-3.5 text-leaf" />
           <span>Pesan WhatsApp</span>
         </button>
       </div>

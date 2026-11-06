@@ -141,22 +141,19 @@ export const CalorieCalculator: React.FC<CalorieCalculatorProps> = ({
   return (
     <div className="pt-28 pb-20 bg-paper">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        {/* Header: Leading directly without generic kicker */}
         <div className="max-w-3xl mb-12 text-left">
-          <span className="text-xs font-semibold text-leaf mb-2 block">
-            Edukasi kebutuhan energi
-          </span>
           <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-forest tracking-tight">
-            Understand your daily energy needs.
+            Hitung estimasi kebutuhan kalori harianmu.
           </h1>
-          <p className="mt-3 text-base sm:text-lg text-ink-muted leading-relaxed">
-            Ketahui estimasi kebutuhan kalori harianmu berdasarkan rumus standar ilmiah Mifflin-St Jeor dan temukan kategori meal box yang dapat menjadi referensi ideal untuk rutinitas makan siangmu.
+          <p className="mt-4 text-base sm:text-lg text-ink-2 leading-relaxed">
+            Ketahui estimasi kebutuhan kalori harianmu berdasarkan rumus standar ilmiah Mifflin-St Jeor dan temukan kategori meal box yang paling sesuai untuk rutinitas makan siangmu.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Input Form Column (7 Cols) */}
-          <div className="lg:col-span-7 bg-paper-elevated border border-rule rounded-3xl p-6 sm:p-8 shadow-xs">
+          <div className="lg:col-span-7 bg-paper border border-rule rounded-xl p-6 sm:p-8 shadow-xs text-left">
             <div className="flex items-center gap-2 pb-4 mb-6 border-b border-rule-subtle">
               <Calculator className="w-5 h-5 text-leaf" />
               <h2 className="font-display font-bold text-lg text-forest">

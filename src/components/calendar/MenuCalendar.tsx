@@ -32,8 +32,8 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
   ];
 
   const getWeekLabel = (offset: number) => {
-    if (offset === 0) return 'Minggu berjalan (contoh menu rotasi)';
-    if (offset === 1) return 'Minggu depan (pre-order buka Jumat 17.00 WIB)';
+    if (offset === 0) return 'Minggu berjalan (contoh rotasi)';
+    if (offset === 1) return 'Minggu depan (pre-order Jumat 17.00 WIB)';
     if (offset === -1) return 'Minggu sebelumnya';
     return `Periode minggu (${offset > 0 ? `+${offset}` : offset})`;
   };
@@ -55,64 +55,65 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
   });
 
   return (
-    <div className="pt-28 pb-20 bg-paper">
+    <div className="pt-24 pb-20 bg-paper">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header Section */}
+        {/* Header Section: Heading leads directly */}
         <div className="max-w-3xl mb-10 text-left">
-          <span className="text-sm font-medium text-fresh mb-1.5 block">
-            Jadwal rotasi makanan sehat
-          </span>
           <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-forest tracking-tight">
-            Kalender Menu Interaktif.
+            Kalender menu katering mingguan.
           </h1>
-          <p className="mt-3 text-base text-ink-2 leading-relaxed">
+          <p className="mt-3 text-base sm:text-lg text-ink-2 leading-relaxed">
             NutriBox Daily merilis jadwal menu berganti setiap minggu. Jelajahi sajian harian dengan estimasi kalori dan makronutrisi lengkap di bawah ini.
           </p>
         </div>
 
         {/* Calendar Control Toolbar */}
-        <div className="bg-paper-elevated border border-rule-subtle rounded-card p-5 mb-8 shadow-xs space-y-4">
+        <div className="bg-paper border border-rule rounded-xl p-5 mb-8 shadow-xs space-y-4 text-left">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             {/* View Mode Toggle: Weekly vs Monthly */}
-            <div className="inline-flex p-1 rounded-card-sm bg-paper-2 border border-rule-subtle self-start">
+            <div className="inline-flex p-1 rounded-lg bg-paper-2 border border-rule-subtle self-start">
               <button
+                type="button"
                 onClick={() => setViewMode('weekly')}
-                className={`px-4 py-2 rounded-card-sm text-xs sm:text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest ${
+                className={`px-4 py-2 rounded-md text-xs font-semibold transition-colors active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer ${
                   viewMode === 'weekly'
-                    ? 'bg-forest text-accent-ink shadow-xs'
+                    ? 'bg-forest text-white shadow-xs'
                     : 'text-ink-2 hover:text-forest'
                 }`}
               >
-                Tampilan mingguan
+                <span>Tampilan mingguan</span>
               </button>
               <button
+                type="button"
                 onClick={() => setViewMode('monthly')}
-                className={`px-4 py-2 rounded-card-sm text-xs sm:text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest ${
+                className={`px-4 py-2 rounded-md text-xs font-semibold transition-colors active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer ${
                   viewMode === 'monthly'
-                    ? 'bg-forest text-accent-ink shadow-xs'
+                    ? 'bg-forest text-white shadow-xs'
                     : 'text-ink-2 hover:text-forest'
                 }`}
               >
-                Tampilan kalender bulanan
+                <span>Tampilan bulanan</span>
               </button>
             </div>
 
             {/* Period Navigation */}
             <div className="flex items-center gap-2">
               <button
+                type="button"
                 onClick={() => setWeekOffset(weekOffset - 1)}
-                className="p-2 rounded-card-sm border border-rule hover:bg-paper-3 text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
+                className="p-2 rounded-lg border border-rule hover:bg-paper-2 text-forest transition-colors active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
                 title="Periode sebelumnya"
                 aria-label="Periode sebelumnya"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-              <div className="px-3.5 py-1.5 rounded-card-sm bg-paper-2 border border-rule-subtle text-xs font-semibold text-forest min-w-[240px] text-center">
+              <div className="px-3.5 py-1.5 rounded-lg bg-paper-2 border border-rule-subtle text-xs font-semibold text-forest min-w-[220px] text-center">
                 {getWeekLabel(weekOffset)}
               </div>
               <button
+                type="button"
                 onClick={() => setWeekOffset(weekOffset + 1)}
-                className="p-2 rounded-card-sm border border-rule hover:bg-paper-3 text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
+                className="p-2 rounded-lg border border-rule hover:bg-paper-2 text-forest transition-colors active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
                 title="Periode berikutnya"
                 aria-label="Periode berikutnya"
               >
@@ -120,8 +121,9 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
               </button>
               {weekOffset !== 0 && (
                 <button
+                  type="button"
                   onClick={() => setWeekOffset(0)}
-                  className="px-2.5 py-1.5 rounded-card-sm text-xs font-semibold text-fresh hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
+                  className="px-2.5 py-1.5 rounded-lg text-xs font-semibold text-leaf hover:underline active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
                 >
                   Hari ini
                 </button>
@@ -131,17 +133,18 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
 
           {/* Category Filter Pills */}
           <div className="pt-3 border-t border-rule-subtle flex items-center gap-2 overflow-x-auto pb-1">
-            <span className="text-xs font-medium text-ink-2 shrink-0 mr-1 flex items-center gap-1">
+            <span className="text-xs font-semibold text-ink-2 shrink-0 mr-1 flex items-center gap-1">
               <Filter className="w-3.5 h-3.5" /> Filter:
             </span>
             {categories.map((c) => (
               <button
                 key={c.id}
+                type="button"
                 onClick={() => setActiveCategory(c.id)}
-                className={`px-3 py-1.5 rounded-card-sm text-xs font-medium transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest ${
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors whitespace-nowrap shrink-0 active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer ${
                   activeCategory === c.id
-                    ? 'bg-forest text-accent-ink font-semibold'
-                    : 'bg-paper-2 border border-rule-subtle text-ink hover:bg-paper-3'
+                    ? 'bg-forest text-white shadow-xs'
+                    : 'bg-paper-2 border border-rule-subtle text-ink hover:bg-paper'
                 }`}
               >
                 {c.label}
@@ -163,55 +166,56 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
                       <div
                         key={item.id}
                         onClick={() => setSelectedDate(item.date)}
-                        className={`cursor-pointer rounded-card p-4 border transition-colors duration-200 flex flex-col justify-between ${
+                        className={`cursor-pointer rounded-xl p-4 border transition-colors flex flex-col justify-between text-left ${
                           isSelected
-                            ? 'bg-forest text-accent-ink border-forest shadow-md'
-                            : 'bg-paper-elevated text-ink border-rule-subtle hover:border-fresh hover:shadow-xs'
+                            ? 'bg-forest text-white border-forest shadow-xs'
+                            : 'bg-paper text-ink border-rule hover:border-forest shadow-xs'
                         }`}
                       >
                         <div>
                           <div className="flex items-center justify-between text-xs mb-2">
                             <span className={`font-bold text-xs ${
-                              isSelected ? 'text-sage' : 'text-fresh'
+                              isSelected ? 'text-sage' : 'text-leaf'
                             }`}>
                               {item.dayName}
                             </span>
-                            <span className={`text-xs ${isSelected ? 'text-mint' : 'text-ink-2'}`}>
+                            <span className={`text-[11px] tabular-nums ${isSelected ? 'text-mint' : 'text-ink-2'}`}>
                               {item.date}
                             </span>
                           </div>
 
-                          <div className="relative aspect-[4/3] rounded-card-sm overflow-hidden mb-3 bg-paper-3">
+                          <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-3 bg-paper-2 border border-rule-subtle">
                             <img
                               src={item.image}
                               alt={item.name}
                               className="w-full h-full object-cover"
                               loading="lazy"
                             />
-                            <span className="absolute top-2 left-2 px-2 py-0.5 rounded-pill bg-forest text-accent-ink text-xs font-medium">
+                            <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-forest text-white text-[10px] font-semibold">
                               {item.categoryLabel}
                             </span>
                           </div>
 
-                          <h4 className="font-display font-bold text-sm leading-snug line-clamp-2">
+                          <h3 className="font-display font-bold text-sm leading-snug line-clamp-2">
                             {item.name}
-                          </h4>
+                          </h3>
                         </div>
 
                         <div className="mt-3 pt-2 border-t border-rule-subtle flex items-center justify-between text-xs">
-                          <span className={`font-bold num ${isSelected ? 'text-citrus' : 'text-forest'}`}>
+                          <span className={`font-bold tabular-nums ${isSelected ? 'text-citrus' : 'text-forest'}`}>
                             {item.calories} kcal
                           </span>
                           <button
+                            type="button"
                             onClick={(e) => {
                               e.stopPropagation();
                               setSelectedMenuModal(item);
                             }}
-                            className={`text-xs font-semibold underline underline-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest rounded-sm ${
-                              isSelected ? 'text-accent-ink' : 'text-forest hover:text-fresh'
+                            className={`text-xs font-semibold underline underline-offset-2 active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer ${
+                              isSelected ? 'text-white' : 'text-forest hover:text-leaf'
                             }`}
                           >
-                            Detail
+                            <span>Detail</span>
                           </button>
                         </div>
                       </div>
@@ -221,21 +225,21 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
 
                 {/* Selected Day Spotlight Preview */}
                 {activeMenu && (
-                  <div className="bg-paper-elevated border border-rule-subtle rounded-card p-6 sm:p-8 shadow-sm">
+                  <div className="bg-paper border border-rule rounded-xl p-6 sm:p-8 shadow-xs text-left">
                     <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-rule-subtle">
-                      <div className="flex items-center gap-2 text-xs font-semibold text-fresh">
+                      <div className="flex items-center gap-2 text-xs font-semibold text-leaf">
                         <CalendarDays className="w-4 h-4 text-forest" />
                         <span>Fokus menu: {activeMenu.dayName}, {activeMenu.date}</span>
-                        <span>•</span>
+                        <span>,</span>
                         <span className="text-ink-2">Pengiriman 10.30 sampai 11.45 WIB</span>
                       </div>
-                      <span className="px-2.5 py-1 rounded-card-sm bg-paper-2 border border-rule-subtle text-ink-2 text-xs font-medium">
+                      <span className="px-2.5 py-1 rounded-md bg-paper-2 border border-rule-subtle text-ink-2 text-xs font-medium">
                         Contoh menu rotasi mingguan
                       </span>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mt-6">
-                      <div className="lg:col-span-4 rounded-card-sm overflow-hidden aspect-[4/3] bg-paper-3">
+                      <div className="lg:col-span-4 rounded-lg overflow-hidden aspect-[4/3] bg-paper-2 border border-rule-subtle">
                         <img
                           src={activeMenu.image}
                           alt={activeMenu.name}
@@ -244,48 +248,50 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
                       </div>
 
                       <div className="lg:col-span-8 space-y-3 text-left">
-                        <span className="text-xs font-medium text-fresh block">
+                        <span className="text-xs font-semibold text-leaf block">
                           {activeMenu.categoryLabel}
                         </span>
-                        <h3 className="font-display font-bold text-2xl text-forest">
+                        <h2 className="font-display font-bold text-2xl text-forest">
                           {activeMenu.name}
-                        </h3>
+                        </h2>
                         <p className="text-xs sm:text-sm text-ink-2 leading-relaxed">
                           {activeMenu.description}
                         </p>
 
-                        <div className="flex flex-wrap gap-3 pt-2 text-xs">
-                          <div className="px-3 py-1.5 rounded-card-sm bg-paper-2 border border-rule-subtle">
+                        <div className="flex flex-wrap gap-3 pt-2 text-xs tabular-nums">
+                          <div className="px-3 py-1.5 rounded-lg bg-paper-2 border border-rule-subtle">
                             <span className="text-ink-2 block text-xs">Energi:</span>
-                            <span className="font-bold text-forest num">{activeMenu.calories} kcal</span>
+                            <span className="font-bold text-forest">{activeMenu.calories} kcal</span>
                           </div>
-                          <div className="px-3 py-1.5 rounded-card-sm bg-paper-2 border border-rule-subtle">
+                          <div className="px-3 py-1.5 rounded-lg bg-paper-2 border border-rule-subtle">
                             <span className="text-ink-2 block text-xs">Protein:</span>
-                            <span className="font-bold text-forest num">{activeMenu.protein} g</span>
+                            <span className="font-bold text-forest">{activeMenu.protein} g</span>
                           </div>
-                          <div className="px-3 py-1.5 rounded-card-sm bg-paper-2 border border-rule-subtle">
+                          <div className="px-3 py-1.5 rounded-lg bg-paper-2 border border-rule-subtle">
                             <span className="text-ink-2 block text-xs">Karbohidrat:</span>
-                            <span className="font-bold text-forest num">{activeMenu.carbohydrates} g</span>
+                            <span className="font-bold text-forest">{activeMenu.carbohydrates} g</span>
                           </div>
-                          <div className="px-3 py-1.5 rounded-card-sm bg-paper-2 border border-rule-subtle">
+                          <div className="px-3 py-1.5 rounded-lg bg-paper-2 border border-rule-subtle">
                             <span className="text-ink-2 block text-xs">Lemak:</span>
-                            <span className="font-bold text-forest num">{activeMenu.fat} g</span>
+                            <span className="font-bold text-forest">{activeMenu.fat} g</span>
                           </div>
                         </div>
 
                         <div className="pt-4 flex flex-wrap items-center gap-3">
                           <button
+                            type="button"
                             onClick={() => setSelectedMenuModal(activeMenu)}
-                            className="px-4 py-2.5 rounded-card-sm border border-forest text-forest hover:bg-paper-3 text-xs font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
+                            className="px-4 py-2.5 rounded-lg border border-forest text-forest hover:bg-paper-2 active:scale-[0.99] disabled:opacity-50 text-xs font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer whitespace-nowrap"
                           >
-                            Lihat rincian bahan
+                            <span>Lihat rincian bahan</span>
                           </button>
                           <button
+                            type="button"
                             onClick={() => {
                               const msg = `Halo NutriBox Daily, saya ingin memesan menu ${activeMenu.name} untuk jadwal ${activeMenu.dayName} (${activeMenu.date}). Apakah kuota pengantaran ke area saya masih tersedia?`;
                               onOpenWhatsApp(msg);
                             }}
-                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-card-sm bg-forest hover:bg-forest-hover text-accent-ink text-xs font-semibold shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-forest hover:bg-forest-hover active:scale-[0.99] disabled:opacity-50 text-white text-xs font-semibold shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer whitespace-nowrap"
                           >
                             <MessageSquare className="w-3.5 h-3.5" />
                             <span>Pesan menu tanggal ini</span>
@@ -298,30 +304,32 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
               </div>
             ) : (
               /* Informative Empty State */
-              <div className="bg-paper-elevated border border-rule-subtle rounded-card p-10 sm:p-14 text-center max-w-2xl mx-auto shadow-sm">
-                <div className="w-16 h-16 rounded-card-sm bg-paper-2 border border-rule-subtle text-fresh flex items-center justify-center mx-auto mb-5">
-                  <CalendarIcon className="w-8 h-8" />
+              <div className="bg-paper border border-rule rounded-xl p-10 sm:p-14 text-center max-w-2xl mx-auto shadow-xs">
+                <div className="w-14 h-14 rounded-lg bg-paper-2 border border-rule text-leaf flex items-center justify-center mx-auto mb-5">
+                  <CalendarIcon className="w-7 h-7" />
                 </div>
-                <h3 className="font-display font-bold text-2xl text-forest mb-2">
+                <h2 className="font-display font-bold text-2xl text-forest mb-2">
                   {emptyStateInfo.title}
-                </h3>
+                </h2>
                 <p className="text-sm text-ink-2 max-w-md mx-auto mb-6 leading-relaxed">
                   {emptyStateInfo.supportingText}
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                   <button
+                    type="button"
                     onClick={() => setWeekOffset(0)}
-                    className="w-full sm:w-auto px-5 py-2.5 rounded-card-sm border border-rule text-forest text-xs font-semibold hover:bg-paper-3 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
+                    className="w-full sm:w-auto px-5 py-2.5 rounded-lg border border-rule text-forest text-xs font-semibold hover:bg-paper-2 active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer whitespace-nowrap"
                   >
-                    Kembali ke contoh menu rotasi
+                    <span>Kembali ke rotasi awal</span>
                   </button>
                   <button
+                    type="button"
                     onClick={() =>
                       onOpenWhatsApp(
                         'Halo NutriBox Daily, saya ingin menanyakan rilis menu katering terbaru untuk periode minggu mendatang.'
                       )
                     }
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-card-sm bg-forest text-accent-ink text-xs font-semibold hover:bg-forest-hover shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-forest text-white text-xs font-semibold hover:bg-forest-hover shadow-xs active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer whitespace-nowrap"
                   >
                     <MessageSquare className="w-4 h-4" />
                     <span>{emptyStateInfo.ctaText}</span>
@@ -332,17 +340,17 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
           </div>
         ) : (
           /* Monthly Calendar Grid View */
-          <div className="bg-paper-elevated border border-rule-subtle rounded-card p-6 sm:p-8 shadow-sm">
+          <div className="bg-paper border border-rule rounded-xl p-6 sm:p-8 shadow-xs text-left">
             <div className="flex items-center justify-between mb-6 pb-3 border-b border-rule-subtle">
               <div>
-                <h3 className="font-display font-bold text-lg text-forest">
+                <h2 className="font-display font-bold text-lg text-forest">
                   November 2026
-                </h3>
+                </h2>
                 <p className="text-xs text-ink-2">
                   Hari operasional reguler: Senin sampai Jumat (Sabtu, Minggu dan libur nasional libur produksi).
                 </p>
               </div>
-              <span className="text-xs px-2.5 py-1 rounded-pill bg-paper-3 text-forest font-semibold">
+              <span className="text-xs px-2.5 py-1 rounded-md bg-paper-2 border border-rule text-forest font-semibold">
                 Simulasi kalender bulanan
               </span>
             </div>
@@ -372,29 +380,29 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
                       }
                     }
                   }}
-                  className={`min-h-[70px] sm:min-h-[85px] p-2 rounded-card-sm border text-left flex flex-col justify-between transition-colors ${
+                  className={`min-h-[70px] sm:min-h-[85px] p-2 rounded-lg border text-left flex flex-col justify-between transition-colors ${
                     d.isWeekend
                       ? 'bg-paper-2 border-rule-subtle text-muted cursor-not-allowed opacity-60'
                       : d.hasSampleMenu
-                      ? 'bg-paper-2 border-fresh hover:bg-paper-3 cursor-pointer shadow-xs'
-                      : 'bg-paper-elevated border-rule-subtle hover:border-forest cursor-pointer'
+                      ? 'bg-paper-2 border-leaf hover:bg-paper cursor-pointer shadow-xs'
+                      : 'bg-paper border-rule hover:border-forest cursor-pointer'
                   }`}
                 >
                   <div className="flex justify-between items-center text-xs font-semibold">
-                    <span className="num">{d.day}</span>
+                    <span className="tabular-nums">{d.day}</span>
                     {d.hasSampleMenu && (
                       <span className="w-2 h-2 rounded-full bg-fresh"></span>
                     )}
                   </div>
                   <div>
                     {d.isWeekend ? (
-                      <span className="text-xs text-muted">Libur</span>
+                      <span className="text-[11px] text-muted">Libur</span>
                     ) : d.hasSampleMenu ? (
-                      <span className="text-xs font-medium text-forest block truncate">
+                      <span className="text-[11px] font-semibold text-forest block truncate">
                         Contoh menu
                       </span>
                     ) : (
-                      <span className="text-xs text-muted block truncate">
+                      <span className="text-[11px] text-muted block truncate">
                         TBA
                       </span>
                     )}
@@ -415,21 +423,22 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
                 </span>
               </div>
               <button
+                type="button"
                 onClick={() =>
                   onOpenWhatsApp(
                     'Halo NutriBox Daily, saya ingin menanyakan jadwal rotasi menu untuk tanggal tertentu bulan ini.'
                   )
                 }
-                className="font-semibold text-forest hover:text-fresh transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest rounded-sm"
+                className="font-semibold text-forest hover:text-leaf transition-colors active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer whitespace-nowrap"
               >
-                Tanya ketersediaan jadwal via WhatsApp
+                <span>Tanya ketersediaan jadwal via WhatsApp</span>
               </button>
             </div>
           </div>
         )}
 
         {/* Calendar Footer Info */}
-        <div className="mt-10 p-5 rounded-card-sm bg-paper-elevated border border-rule-subtle text-xs text-ink-2 flex items-start gap-3">
+        <div className="mt-10 p-5 rounded-lg bg-paper border border-rule text-xs text-ink-2 flex items-start gap-3 text-left">
           <Info className="w-4 h-4 text-terracotta shrink-0 mt-0.5" />
           <p>
             Menu baru diumumkan secara bertahap setiap hari Jumat sore untuk minggu berikutnya. Seluruh sajian dibuat di dapur produksi BSD City pada pagi hari pengiriman (06.00 sampai 10.00 WIB) untuk menjamin kesegaran rasa dan kebersihan higienis.

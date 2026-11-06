@@ -50,28 +50,25 @@ export const FAQPage: React.FC<FAQPageProps> = ({ onOpenWhatsApp }) => {
   return (
     <div className="pt-28 pb-20 bg-paper">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        {/* Header: Leading directly without generic kicker */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-semibold text-leaf mb-2 block">
-            Pusat informasi dan bantuan
-          </span>
           <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-forest tracking-tight">
             Frequently asked questions.
           </h1>
-          <p className="mt-3 text-sm sm:text-base text-ink-muted leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base text-ink-2 leading-relaxed">
             Temukan jawaban lengkap mengenai menu, pengiriman kurir, sistem langganan, dan kebijakan operasional NutriBox Daily.
           </p>
 
           {/* Search Input */}
           <div className="mt-6 relative max-w-md mx-auto">
-            <Search className="w-4 h-4 text-ink-muted absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-ink-2 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               aria-label="Cari pertanyaan"
               placeholder="Cari pertanyaan... (misal: kalori, pengiriman, gopay)"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 rounded-2xl border border-rule bg-paper-elevated text-xs sm:text-sm text-ink shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
+              className="w-full pl-10 pr-4 py-3 rounded-lg border border-rule bg-paper text-xs sm:text-sm text-ink shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
             />
           </div>
         </div>

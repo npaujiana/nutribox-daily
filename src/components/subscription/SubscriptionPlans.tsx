@@ -65,29 +65,26 @@ Terima kasih.`;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="max-w-3xl mb-12 text-left">
-          <span className="text-xs font-semibold text-leaf mb-2 block">
-            Pilihan paket makan siang
-          </span>
           <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-forest tracking-tight">
-            Your healthy routine starts here.
+            Paket makan siang sehat, pesan harian atau langganan.
           </h1>
-          <p className="mt-3 text-base sm:text-lg text-ink-muted leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-ink-2 leading-relaxed">
             Pilih paket makanan yang membantu rutinitas makan siangmu menjadi lebih praktis dan teratur. Tanpa repot memasak, tanpa penambahan MSG, dan tiba tepat waktu sebelum jam istirahat.
           </p>
         </div>
 
         {/* Pricing Comparison Table (Daily, Weekly 5-Day, Monthly 20-Day) */}
-        <div className="bg-paper-elevated border border-rule-subtle rounded-3xl p-6 sm:p-8 shadow-xs mb-14">
+        <div className="bg-paper border border-rule rounded-xl p-6 sm:p-8 shadow-xs mb-14 text-left">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-6 border-b border-rule-subtle gap-2">
             <div>
               <h2 className="font-display font-bold text-xl text-forest">
                 Daftar harga resmi NutriBox Daily
               </h2>
-              <p className="text-xs text-ink-muted">
+              <p className="text-xs text-ink-2">
                 Bandingkan harga satuan dan paket hemat berlangganan 5 hari serta 20 hari kerja.
               </p>
             </div>
-            <span className="text-[11px] font-semibold text-leaf bg-mint px-3 py-1 rounded-full self-start sm:self-auto">
+            <span className="text-[11px] font-semibold text-leaf bg-paper-2 border border-rule px-3 py-1 rounded-md self-start sm:self-auto">
               Berlaku untuk 2026
             </span>
           </div>
@@ -137,15 +134,12 @@ Terima kasih.`;
         {/* Interactive Subscription Configurator */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Configurator Form (7 Cols) */}
-          <div className="lg:col-span-7 bg-paper-elevated border border-rule rounded-3xl p-6 sm:p-8 shadow-sm space-y-6">
+          <div className="lg:col-span-7 bg-paper border border-rule rounded-xl p-6 sm:p-8 shadow-xs space-y-6 text-left">
             <div>
-              <span className="text-xs font-semibold text-leaf block mb-1">
-                Kalkulator pemesanan dan langganan
-              </span>
-              <h3 className="font-display font-bold text-2xl text-forest">
+              <h2 className="font-display font-bold text-2xl text-forest">
                 Kustomisasi paket katering Anda
-              </h3>
-              <p className="text-xs text-ink-muted mt-1">
+              </h2>
+              <p className="text-xs text-ink-2 mt-1">
                 Sesuaikan durasi, kategori nutrisi, dan preferensi untuk menghasilkan rincian pesan WhatsApp otomatis.
               </p>
             </div>
