@@ -1,0 +1,93 @@
+@theme static {
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem);
+  --text-display: clamp(2.5rem, 4.5vw + 0.8rem, 4.75rem);
+  --text-section: clamp(1.85rem, 2.5vw + 0.8rem, 3rem);
+  --text-title: clamp(1.2rem, 0.75vw + 0.85rem, 1.5rem);
+  --text-lead: clamp(1.05rem, 0.35vw + 0.95rem, 1.25rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* NutriBox Daily Color Tokens (OKLCH with >= 0.005 chroma) */
+  --color-paper: oklch(97.6% 0.007 95);      /* Warm Cream */
+  --color-paper-2: oklch(98.4% 0.006 95);    /* Cream Card */
+  --color-paper-3: oklch(94.2% 0.016 135);   /* Soft Mint */
+  --color-paper-elevated: oklch(99.2% 0.005 95); /* Tinted Pure White */
+
+  --color-ink: oklch(28% 0.03 162);          /* Primary Deep Charcoal Green */
+  --color-ink-2: oklch(55% 0.015 158);       /* Secondary Slate Green */
+  --color-muted: oklch(68% 0.012 155);       /* Muted Subtle */
+  --color-rule: oklch(80.5% 0.042 132);      /* Sage Border */
+  --color-rule-subtle: oklch(89% 0.02 132);  /* Subtle Sage Border */
+
+  --color-accent: oklch(33.2% 0.058 165);    /* Deep Forest Green */
+  --color-accent-hover: oklch(39% 0.065 165);/* Forest Light */
+  --color-accent-ink: oklch(98% 0.005 95);   /* Cream Text on Forest */
+
+  --color-fresh: oklch(63.5% 0.098 135);     /* Fresh Green */
+  --color-fresh-hover: oklch(57% 0.095 135); /* Fresh Darker */
+  --color-citrus: oklch(83% 0.12 85);        /* Citrus Yellow */
+  --color-citrus-soft: oklch(96% 0.03 85);   /* Citrus Tint */
+  --color-terracotta: oklch(64% 0.11 48);    /* Terracotta */
+  --color-terracotta-soft: oklch(94% 0.02 48); /* Terracotta Soft */
+
+  --color-focus: oklch(33.2% 0.058 165);     /* Focus Ring matches Forest */
+  --color-error: oklch(52% 0.19 27);
+  --color-success: oklch(50% 0.12 150);
+
+  /* Semantic helper names */
+  --color-forest: var(--color-accent);
+  --color-forest-hover: var(--color-accent-hover);
+  --color-sage: var(--color-rule);
+  --color-mint: var(--color-paper-3);
+  --color-cream: var(--color-paper);
+  --color-cream-card: var(--color-paper-2);
+
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-outlier: var(--font-body);
+
+  --radius-card: 1.25rem;
+  --radius-card-sm: 0.875rem;
+  --radius-pill: 9999px;
+  --shadow-card: 0 4px 20px -2px rgba(23, 63, 53, 0.06);
+  --shadow-card-hover: 0 12px 28px -4px rgba(23, 63, 53, 0.12);
+  --tracking-display: -0.025em;
+}
+
+:root {
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --space-4xl: 144px;
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+  --container: 1280px;
+  --gutter: 24px;
+  --gap-columns: 24px;
+  --section-gap-s: 80px;
+  --section-gap: 112px;
+  --section-gap-l: 144px;
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-sticky-nav: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}

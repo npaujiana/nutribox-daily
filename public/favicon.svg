@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#173F35"/>
+  <!-- Bowl base -->
+  <path d="M14 34C14 43.941 22.059 52 32 52C41.941 52 50 43.941 50 34H14Z" fill="#6D9C68"/>
+  <!-- Steam / Sprouts -->
+  <path d="M32 14C32 20 28 24 28 28H36C36 24 32 20 32 14Z" fill="#B8C9AE"/>
+  <path d="M38 18C41 21 43 24 43 28H40C40 25 38 23 38 18Z" fill="#E9C96B"/>
+  <path d="M26 18C23 21 21 24 21 28H24C24 25 26 23 26 18Z" fill="#E9C96B"/>
+</svg>
