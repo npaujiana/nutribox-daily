@@ -148,11 +148,11 @@ export const FAQPage: React.FC<FAQPageProps> = ({ onOpenWhatsApp }) => {
         </div>
 
         {/* Still have questions CTA */}
-        <div className="mt-14 bg-forest text-white rounded-3xl p-8 text-center space-y-4 shadow-xl">
+        <div className="mt-14 bg-forest text-white rounded-xl p-8 text-center space-y-4 shadow-sm">
           <h3 className="font-display font-bold text-xl sm:text-2xl text-white">
             Punya Pertanyaan Lain yang Belum Terjawab?
           </h3>
-          <p className="text-xs sm:text-sm text-sage max-w-md mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-white/85 max-w-md mx-auto leading-relaxed">
             Tim Customer Service NutriBox Daily siap membantu Anda mengenai ketersediaan rute kurir, pesanan khusus, atau detail rotasi menu.
           </p>
           <button
@@ -162,9 +162,9 @@ export const FAQPage: React.FC<FAQPageProps> = ({ onOpenWhatsApp }) => {
                 'Halo NutriBox Daily, saya ingin menanyakan hal yang belum tertera di halaman FAQ website.'
               )
             }
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-leaf hover:bg-leaf/90 active:scale-[0.99] disabled:opacity-50 text-forest font-bold text-xs sm:text-sm shadow-md transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-citrus"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white hover:bg-white/95 active:scale-[0.99] disabled:opacity-50 text-forest font-bold text-xs sm:text-sm shadow-sm transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
           >
-            <MessageSquare className="w-4 h-4" />
+            <MessageSquare className="w-4 h-4 text-forest" />
             <span>Tanya langsung via WhatsApp</span>
           </button>
         </div>

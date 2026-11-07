@@ -303,12 +303,12 @@ Terima kasih.`;
             </div>
 
             {/* Total Price Display */}
-            <div className="p-4 rounded-2xl bg-paper-elevated/10 border border-white/20">
-              <span className="text-[11px] text-sage block">Estimasi total harga paket:</span>
+            <div className="p-4 rounded-xl bg-paper-elevated/10 border border-white/20">
+              <span className="text-[11px] text-white/80 block">Estimasi total harga paket:</span>
               <div className="font-display font-black text-3xl text-white mt-1">
                 {formatRupiah(basePrice)}
               </div>
-              <p className="text-[11px] text-sage mt-1">
+              <p className="text-[11px] text-white/75 mt-1">
                 *Belum termasuk ongkir kurir ke alamat pengantaran.
               </p>
             </div>
@@ -318,14 +318,14 @@ Terima kasih.`;
               <button
                 type="button"
                 onClick={handleCheckoutWhatsApp}
-                className="w-full py-3.5 px-4 rounded-xl bg-leaf hover:bg-leaf/90 active:scale-[0.99] disabled:opacity-50 text-forest font-bold text-sm shadow-md transition-colors flex items-center justify-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-citrus"
+                className="w-full py-3.5 px-4 rounded-lg bg-white hover:bg-white/95 active:scale-[0.99] disabled:opacity-50 text-forest font-bold text-sm shadow-sm transition-colors flex items-center justify-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4 text-forest" />
                 <span className="whitespace-nowrap">Pesan paket via WhatsApp</span>
-                <ArrowUpRight className="w-4 h-4 motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5 motion-safe:transition-transform" />
+                <ArrowUpRight className="w-4 h-4 text-forest motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5 motion-safe:transition-transform" />
               </button>
 
-              <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-[11px] text-sage leading-relaxed">
+              <div className="p-3 rounded-lg bg-white/5 border border-white/10 text-[11px] text-white/80 leading-relaxed">
                 Pemesanan baru resmi terkonfirmasi setelah customer service memverifikasi ketersediaan menu, alamat, dan pembayaran via WhatsApp.
               </div>
             </div>

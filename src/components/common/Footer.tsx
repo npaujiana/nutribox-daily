@@ -127,7 +127,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConfig, config
                 <button
                   type="button"
                   onClick={onOpenConfig}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-paper-elevated/10 text-white hover:bg-leaf hover:text-forest active:scale-[0.99] disabled:opacity-50 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-paper-elevated/10 text-white hover:bg-white hover:text-forest active:scale-[0.99] disabled:opacity-50 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white cursor-pointer"
                 >
                   <Settings className="w-3.5 h-3.5" />
                   <span>Pengaturan kontak bisnis</span>

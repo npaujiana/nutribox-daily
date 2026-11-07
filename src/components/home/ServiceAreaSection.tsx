@@ -96,7 +96,7 @@ export const ServiceAreaSection: React.FC<ServiceAreaSectionProps> = ({ onOpenWh
                   Jakarta Selatan dan area sekitarnya
                 </h4>
               </div>
-              <p className="text-xs text-sage leading-relaxed mb-4">
+              <p className="text-xs text-white/85 leading-relaxed mb-4">
                 Area Jakarta Selatan dan wilayah perbatasan Tangerang Raya lainnya memerlukan konfirmasi rute dan kuota harian kurir terlebih dahulu.
               </p>
               <button
@@ -106,10 +106,10 @@ export const ServiceAreaSection: React.FC<ServiceAreaSectionProps> = ({ onOpenWh
                     'Halo NutriBox Daily, saya ingin menanyakan apakah alamat pengiriman saya di [tulis alamat/kawasan Anda] masuk dalam rute pengantaran katering?'
                   )
                 }
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-leaf hover:bg-leaf/90 active:scale-[0.99] disabled:opacity-50 text-forest font-bold text-xs shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-citrus whitespace-nowrap cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-white hover:bg-white/95 active:scale-[0.99] disabled:opacity-50 text-forest font-bold text-xs shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white whitespace-nowrap cursor-pointer"
               >
                 <span>Cek jangkauan alamat saya</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-forest" />
               </button>
             </div>
 

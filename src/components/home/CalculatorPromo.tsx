@@ -15,7 +15,7 @@ export const CalculatorPromo: React.FC<CalculatorPromoProps> = ({ onNavigate }) 
               Kenali estimasi kebutuhan kalori harianmu.
             </h2>
 
-            <p className="text-sm sm:text-base text-sage leading-relaxed mb-8">
+            <p className="text-sm sm:text-base text-white/85 leading-relaxed mb-8">
               Pahami kebutuhan energi harianmu melalui kalkulator interaktif berbasis formula Mifflin-St Jeor sebelum menentukan kategori meal box yang paling tepat untuk rutinitasmu.
             </p>
 
@@ -23,18 +23,18 @@ export const CalculatorPromo: React.FC<CalculatorPromoProps> = ({ onNavigate }) 
               <button
                 type="button"
                 onClick={() => onNavigate('calculator')}
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-leaf hover:bg-leaf/90 text-forest font-bold text-sm shadow-xs active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-citrus whitespace-nowrap cursor-pointer"
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-white hover:bg-white/95 text-forest font-bold text-sm shadow-sm active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white whitespace-nowrap cursor-pointer"
               >
                 <span>Hitung kebutuhan kalori</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 text-forest" />
               </button>
 
-              <span className="text-xs text-sage text-center sm:text-left">
+              <span className="text-xs text-white/80 text-center sm:text-left">
                 Tanpa perlu registrasi akun, privasi data aman di browser Anda.
               </span>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-white/20 flex items-start gap-2.5 text-xs text-sage">
+            <div className="mt-8 pt-6 border-t border-white/20 flex items-start gap-2.5 text-xs text-white/80">
               <ShieldAlert className="w-4 h-4 text-citrus shrink-0 mt-0.5" />
               <p>
                 Hasil kalkulator merupakan estimasi energi umum untuk tujuan edukasi referensi meal planning, bukan diagnosis medis atau anjuran gizi klinis personal.

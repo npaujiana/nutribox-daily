@@ -150,7 +150,7 @@ export const SubscriptionHighlight: React.FC<SubscriptionHighlightProps> = ({ on
               <button
                 type="button"
                 onClick={() => onNavigate('subscription')}
-                className="w-full py-3.5 px-4 rounded-lg bg-leaf hover:bg-leaf/90 text-forest font-bold text-sm shadow-xs active:scale-[0.99] disabled:opacity-50 transition-colors text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-citrus cursor-pointer"
+                className="w-full py-3.5 px-4 rounded-lg bg-white hover:bg-white/95 text-forest font-bold text-sm shadow-sm active:scale-[0.99] disabled:opacity-50 transition-colors text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white cursor-pointer"
               >
                 <span>Pilih Monthly Fit Plan</span>
               </button>

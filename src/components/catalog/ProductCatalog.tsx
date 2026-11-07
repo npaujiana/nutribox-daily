@@ -149,14 +149,14 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({ onOpenWhatsApp, 
             <h3 className="font-display font-bold text-xl sm:text-2xl text-white">
               Cek Weekly Fit Plan (5 hari) dan Monthly Fit Plan (20 hari)
             </h3>
-            <p className="text-xs sm:text-sm text-sage max-w-xl">
+            <p className="text-xs sm:text-sm text-white/85 max-w-xl">
               Dapatkan kemudahan pengantaran terjadwal otomatis setiap Senin sampai Jumat tanpa perlu memesan ulang tiap pagi.
             </p>
           </div>
           <button
             type="button"
             onClick={() => onNavigate('subscription')}
-            className="px-6 py-3.5 rounded-lg bg-leaf hover:bg-leaf/90 text-forest font-bold text-xs sm:text-sm shadow-xs active:scale-[0.99] disabled:opacity-50 transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-citrus cursor-pointer"
+            className="px-6 py-3.5 rounded-lg bg-white hover:bg-white/95 text-forest font-bold text-xs sm:text-sm shadow-sm active:scale-[0.99] disabled:opacity-50 transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white cursor-pointer"
           >
             <span>Lihat paket langganan</span>
           </button>

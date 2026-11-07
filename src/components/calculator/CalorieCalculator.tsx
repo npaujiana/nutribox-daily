@@ -436,16 +436,16 @@ Rekomendasi Kategori: ${recommendation.boxName}
 Saya ingin berkonsultasi mengenai paket katering yang cocok untuk pola makan saya. Terima kasih.`;
                       onOpenWhatsApp(msg);
                     }}
-                    className="w-full py-3.5 px-4 rounded-xl bg-leaf hover:bg-leaf/90 active:scale-[0.99] disabled:opacity-50 text-forest font-bold text-xs sm:text-sm shadow-md transition-colors flex items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-citrus"
+                    className="w-full py-3.5 px-4 rounded-lg bg-white hover:bg-white/95 active:scale-[0.99] disabled:opacity-50 text-forest font-bold text-xs sm:text-sm shadow-sm transition-colors flex items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
-                    <MessageSquare className="w-4 h-4" />
+                    <MessageSquare className="w-4 h-4 text-forest" />
                     <span>Konsultasikan via WhatsApp</span>
                   </button>
 
                   <button
                     type="button"
                     onClick={handleReset}
-                    className="w-full py-2 text-xs text-sage hover:text-white transition-colors text-center active:scale-[0.99] whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage"
+                    className="w-full py-2 text-xs text-white/80 hover:text-white transition-colors text-center active:scale-[0.99] whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
                     <span>Hitung ulang dengan data lain</span>
                   </button>
