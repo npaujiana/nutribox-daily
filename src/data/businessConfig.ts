@@ -24,9 +24,9 @@ export const initialBusinessConfig: BusinessConfig = {
     preorderCutoff: 'Pre-order H-1 ditutup pukul 17.00 WIB setiap harinya'
   },
   whatsapp: {
-    number: '', // Kosong secara default sesuai spesifikasi prompt; dapat diisi di panel konfigurasi
+    number: '', // Kosong secara default sesuai spesifikasi; dapat diisi di panel konfigurasi
     verified: false, // Belum terverifikasi secara resmi oleh pemilik bisnis
-    displayPlaceholder: '+62 811-0000-2480 (Ilustratif / Tahap Setup)'
+    displayPlaceholder: '+62 812-7788-9911 (Direct WhatsApp Hotline)'
   },
   email: {
     address: 'contact@nutriboxdaily.com',

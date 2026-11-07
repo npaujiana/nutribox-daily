@@ -55,7 +55,7 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
   });
 
   return (
-    <div className="pt-24 pb-20 bg-paper">
+    <div className="pt-32 pb-20 bg-paper">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section: Heading leads directly */}
         <div className="max-w-3xl mb-10 text-left">

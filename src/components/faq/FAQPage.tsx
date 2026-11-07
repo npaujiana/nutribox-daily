@@ -48,7 +48,7 @@ export const FAQPage: React.FC<FAQPageProps> = ({ onOpenWhatsApp }) => {
   });
 
   return (
-    <div className="pt-28 pb-20 bg-paper">
+    <div className="pt-32 pb-20 bg-paper">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header: Leading directly without generic kicker */}
         <div className="text-center max-w-2xl mx-auto mb-12">
