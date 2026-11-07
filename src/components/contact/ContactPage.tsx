@@ -39,11 +39,11 @@ Mohon informasi dan panduan selanjutnya. Terima kasih.`;
   };
 
   return (
-    <div className="pt-32 pb-20 bg-paper">
+    <div className="pt-24 sm:pt-28 lg:pt-32 pb-16 lg:pb-20 bg-paper">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero */}
-        <div className="max-w-3xl mb-12 text-left">
-          <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-forest tracking-tight">
+        <div className="max-w-3xl mb-8 sm:mb-12 text-left">
+          <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-forest tracking-tight">
             Hubungi NutriBox Daily.
           </h1>
           <p className="mt-3 text-base sm:text-lg text-ink-2 leading-relaxed">

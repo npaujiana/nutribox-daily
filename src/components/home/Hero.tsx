@@ -8,25 +8,25 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenWhatsApp }) => {
   return (
-    <section className="relative pt-32 pb-16 lg:pt-36 lg:pb-20 bg-paper border-b border-rule-subtle">
+    <section className="relative pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 bg-paper border-b border-rule-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           {/* Left Column: Bold Headline & Editorial Story */}
           <div className="lg:col-span-7 text-left">
-            <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-forest tracking-tight leading-[1.08]">
+            <h1 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-forest tracking-tight leading-[1.1]">
               Katering makan siang sehat, kalori terukur.
             </h1>
 
-            <p className="mt-5 text-base sm:text-lg text-ink-2 leading-relaxed">
+            <p className="mt-4 sm:mt-5 text-sm sm:text-lg text-ink-2 leading-relaxed">
               Menu berganti setiap minggu, tanpa tambahan MSG, dan tiba sebelum jam makan siang di BSD City serta Tangerang Selatan.
             </p>
 
             {/* Action Group: One Dominant CTA + Clean Secondary Link */}
-            <div className="mt-8 flex flex-wrap items-center gap-5">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-5">
               <button
                 type="button"
                 onClick={() => onNavigate('catalog')}
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg bg-forest hover:bg-forest-hover active:scale-[0.99] disabled:opacity-50 text-white font-semibold text-sm shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-forest hover:bg-forest-hover active:scale-[0.99] disabled:opacity-50 text-white font-semibold text-sm shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
               >
                 <span>Lihat Menu & Pesan</span>
                 <ArrowRight className="w-4 h-4 text-fresh" />
@@ -35,7 +35,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenWhatsApp }) => {
               <button
                 type="button"
                 onClick={() => onNavigate('subscription')}
-                className="inline-flex items-center text-sm font-semibold text-forest border-b-2 border-forest pb-0.5 hover:text-fresh hover:border-fresh active:scale-[0.99] disabled:opacity-50 transition-colors cursor-pointer whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
+                className="inline-flex items-center justify-center text-sm font-semibold text-forest border-b-2 border-forest pb-0.5 hover:text-fresh hover:border-fresh active:scale-[0.99] disabled:opacity-50 transition-colors cursor-pointer whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
               >
                 <span>Paket Langganan 5 & 20 Hari</span>
               </button>
@@ -59,7 +59,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenWhatsApp }) => {
           </div>
 
           {/* Right Column: Clean Framed Editorial Meal Photo */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 w-full max-w-md mx-auto lg:max-w-none">
             <div className="overflow-hidden rounded-xl border border-rule bg-paper-2 shadow-xs">
               <div className="relative aspect-[4/3] sm:aspect-square overflow-hidden">
                 <img

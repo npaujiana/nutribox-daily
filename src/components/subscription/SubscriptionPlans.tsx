@@ -61,11 +61,11 @@ Terima kasih.`;
   };
 
   return (
-    <div className="pt-32 pb-20 bg-paper">
+    <div className="pt-24 sm:pt-28 lg:pt-32 pb-16 lg:pb-20 bg-paper">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <div className="max-w-3xl mb-12 text-left">
-          <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-forest tracking-tight">
+        <div className="max-w-3xl mb-8 sm:mb-12 text-left">
+          <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-forest tracking-tight">
             Paket makan siang sehat, pesan harian atau langganan.
           </h1>
           <p className="mt-4 text-base sm:text-lg text-ink-2 leading-relaxed">
@@ -89,7 +89,34 @@ Terima kasih.`;
             </span>
           </div>
 
-          <div className="overflow-x-auto">
+          {/* Mobile Plan Cards View (Reflows into clean cards on small screens) */}
+          <div className="grid grid-cols-1 gap-3.5 md:hidden">
+            {planPricings.map((p) => (
+              <div key={p.category} className="p-4 rounded-xl bg-paper-2 border border-rule-subtle text-left">
+                <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-rule-subtle">
+                  <span className="font-display font-bold text-sm text-forest">{p.label}</span>
+                  <span className="text-[11px] text-ink-2 font-medium">{p.features[1] || ''}</span>
+                </div>
+                <div className="grid grid-cols-3 gap-2 text-center tabular-nums">
+                  <div className="p-2 rounded-lg bg-paper border border-rule-subtle">
+                    <span className="text-[10px] text-ink-2 block">1 Box Satuan</span>
+                    <span className="font-mono font-bold text-xs text-ink">{formatRupiah(p.dailyPrice)}</span>
+                  </div>
+                  <div className="p-2 rounded-lg bg-paper border border-rule-subtle">
+                    <span className="text-[10px] text-ink-2 block">5 Hari</span>
+                    <span className="font-mono font-bold text-xs text-forest">{formatRupiah(p.weeklyPrice)}</span>
+                  </div>
+                  <div className="p-2 rounded-lg bg-paper border border-rule-subtle">
+                    <span className="text-[10px] text-leaf font-bold block">20 Hari</span>
+                    <span className="font-mono font-bold text-xs text-leaf">{formatRupiah(p.monthlyPrice)}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop Table View */}
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs sm:text-sm">
               <thead>
                 <tr className="border-b border-rule text-forest font-display font-bold text-xs">

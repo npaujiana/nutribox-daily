@@ -53,35 +53,57 @@ export const Navbar: React.FC<NavbarProps> = ({
     <>
       <header className="fixed top-0 left-0 right-0 z-40">
         {/* Top Announcement Bar */}
-        <div className="bg-forest text-white border-b border-forest-hover/60 py-2 px-4 sm:px-6 lg:px-8 text-xs">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-1.5 md:gap-4 text-center md:text-left">
-            {/* Left: Fresh Daily Delivery Across Greater Jakarta */}
-            <div className="flex items-center gap-2 flex-wrap justify-center md:justify-start">
-              <Salad className="w-3.5 h-3.5 text-fresh shrink-0" aria-hidden="true" />
-              <span className="font-semibold text-white">
-                Fresh Daily Delivery Across Greater Jakarta
-              </span>
-              <span className="text-white/80 hidden sm:inline">
-                (Jakarta, Tangerang, BSD, Bekasi, Depok)
-              </span>
-            </div>
-
-            {/* Right: Direct WhatsApp Hotline & Halal Certified Kitchen */}
-            <div className="flex items-center gap-2 sm:gap-3 text-[11px] sm:text-xs flex-wrap justify-center">
-              <div className="flex items-center gap-1.5 text-white/85">
-                <span>Direct WhatsApp Hotline:</span>
+        <div className="bg-forest text-white border-b border-forest-hover/60 py-1.5 sm:py-2 px-3 sm:px-6 lg:px-8 text-xs">
+          <div className="max-w-7xl mx-auto">
+            {/* Mobile View (compact single row) */}
+            <div className="flex md:hidden items-center justify-between gap-2 text-[11px]">
+              <div className="flex items-center gap-1.5 min-w-0">
+                <Salad className="w-3.5 h-3.5 text-fresh shrink-0" aria-hidden="true" />
+                <span className="font-semibold text-white truncate">
+                  Delivery Jabodetabek
+                </span>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
                 <button
                   type="button"
                   onClick={() => onOpenWhatsApp()}
-                  className="font-bold text-white hover:text-fresh underline underline-offset-2 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-fresh rounded-xs whitespace-nowrap"
+                  className="font-bold text-fresh hover:underline cursor-pointer whitespace-nowrap focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-fresh rounded-xs"
                 >
-                  {displayPhone}
+                  Hotline: {displayPhone}
                 </button>
               </div>
-              <span className="text-white/30 select-none hidden xs:inline">|</span>
-              <span className="font-medium text-white/90 whitespace-nowrap">
-                Halal Certified Kitchen
-              </span>
+            </div>
+
+            {/* Desktop / Tablet View (full two-sided layout) */}
+            <div className="hidden md:flex items-center justify-between gap-4 text-left">
+              {/* Left: Fresh Daily Delivery Across Greater Jakarta */}
+              <div className="flex items-center gap-2 flex-wrap">
+                <Salad className="w-3.5 h-3.5 text-fresh shrink-0" aria-hidden="true" />
+                <span className="font-semibold text-white">
+                  Fresh Daily Delivery Across Greater Jakarta
+                </span>
+                <span className="text-white/80 hidden lg:inline">
+                  (Jakarta, Tangerang, BSD, Bekasi, Depok)
+                </span>
+              </div>
+
+              {/* Right: Direct WhatsApp Hotline & Halal Certified Kitchen */}
+              <div className="flex items-center gap-3 text-xs">
+                <div className="flex items-center gap-1.5 text-white/85">
+                  <span>Direct WhatsApp Hotline:</span>
+                  <button
+                    type="button"
+                    onClick={() => onOpenWhatsApp()}
+                    className="font-bold text-white hover:text-fresh underline underline-offset-2 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-fresh rounded-xs whitespace-nowrap"
+                  >
+                    {displayPhone}
+                  </button>
+                </div>
+                <span className="text-white/30 select-none">|</span>
+                <span className="font-medium text-white/90 whitespace-nowrap">
+                  Halal Certified Kitchen
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -90,8 +112,8 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div
           className={`bg-paper transition-colors duration-200 ${
             scrolled
-              ? 'border-b border-rule shadow-xs py-2.5'
-              : 'border-b border-rule-subtle py-3'
+              ? 'border-b border-rule shadow-xs py-2 sm:py-2.5'
+              : 'border-b border-rule-subtle py-2.5 sm:py-3'
           }`}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,14 +124,14 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => handleNavClick('home')}
                 className="flex items-center gap-2.5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest rounded-lg whitespace-nowrap active:scale-[0.99] disabled:opacity-50 cursor-pointer"
               >
-                <div className="w-9 h-9 rounded-lg bg-forest flex items-center justify-center text-white shadow-xs">
-                  <Leaf className="w-5 h-5 text-fresh" />
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-forest flex items-center justify-center text-white shadow-xs">
+                  <Leaf className="w-4 h-4 sm:w-5 sm:h-5 text-fresh" />
                 </div>
                 <div>
-                  <span className="font-display font-black text-xl text-forest block leading-none">
+                  <span className="font-display font-black text-lg sm:text-xl text-forest block leading-none">
                     Nutri<span className="text-leaf">Box</span>
                   </span>
-                  <span className="text-[11px] font-semibold text-ink-2 block mt-0.5">
+                  <span className="text-[10px] sm:text-[11px] font-semibold text-ink-2 block mt-0.5">
                     Daily BSD City
                   </span>
                 </div>
@@ -187,7 +209,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="fixed inset-0 bg-forest/40 backdrop-blur-xs"
             onClick={() => setMobileMenuOpen(false)}
           />
-          <div className="fixed top-24 right-0 bottom-0 w-4/5 max-w-sm bg-paper border-l border-rule p-6 flex flex-col justify-between overflow-y-auto shadow-2xl">
+          <div className="fixed top-[74px] sm:top-[86px] right-0 bottom-0 w-4/5 max-w-xs bg-paper border-l border-rule p-5 flex flex-col justify-between overflow-y-auto shadow-2xl">
             <div className="space-y-1">
               <div className="pb-3 mb-3 border-b border-rule-subtle">
                 <span className="text-xs font-bold text-forest">

@@ -97,8 +97,8 @@ Terima kasih.`;
         config={config}
       />
 
-      {/* Main Content Area */}
-      <main className="flex-1">
+      {/* Main Content Area (pb-20 on mobile prevents content clipping by sticky bottom bar) */}
+      <main className="flex-1 pb-20 lg:pb-0">
         {currentTab === 'home' && (
           <>
             <Hero onNavigate={handleNavigate} onOpenWhatsApp={handleOpenWhatsApp} />

@@ -55,27 +55,27 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
   });
 
   return (
-    <div className="pt-32 pb-20 bg-paper">
+    <div className="pt-24 sm:pt-28 lg:pt-32 pb-16 lg:pb-20 bg-paper">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section: Heading leads directly */}
-        <div className="max-w-3xl mb-10 text-left">
-          <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-forest tracking-tight">
+        <div className="max-w-3xl mb-8 sm:mb-10 text-left">
+          <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-forest tracking-tight">
             Kalender menu katering mingguan.
           </h1>
-          <p className="mt-3 text-base sm:text-lg text-ink-2 leading-relaxed">
+          <p className="mt-3 text-sm sm:text-lg text-ink-2 leading-relaxed">
             NutriBox Daily merilis jadwal menu berganti setiap minggu. Jelajahi sajian harian dengan estimasi kalori dan makronutrisi lengkap di bawah ini.
           </p>
         </div>
 
         {/* Calendar Control Toolbar */}
-        <div className="bg-paper border border-rule rounded-xl p-5 mb-8 shadow-xs space-y-4 text-left">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="bg-paper border border-rule rounded-xl p-4 sm:p-5 mb-8 shadow-xs space-y-4 text-left">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
             {/* View Mode Toggle: Weekly vs Monthly */}
             <div className="inline-flex p-1 rounded-lg bg-paper-2 border border-rule-subtle self-start">
               <button
                 type="button"
                 onClick={() => setViewMode('weekly')}
-                className={`px-4 py-2 rounded-md text-xs font-semibold transition-colors active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer ${
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-md text-xs font-semibold transition-colors active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer ${
                   viewMode === 'weekly'
                     ? 'bg-forest text-white shadow-xs'
                     : 'text-ink-2 hover:text-forest'
@@ -86,7 +86,7 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
               <button
                 type="button"
                 onClick={() => setViewMode('monthly')}
-                className={`px-4 py-2 rounded-md text-xs font-semibold transition-colors active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer ${
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-md text-xs font-semibold transition-colors active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer ${
                   viewMode === 'monthly'
                     ? 'bg-forest text-white shadow-xs'
                     : 'text-ink-2 hover:text-forest'
@@ -97,23 +97,23 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
             </div>
 
             {/* Period Navigation */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-between sm:justify-start gap-1.5 sm:gap-2 w-full sm:w-auto">
               <button
                 type="button"
                 onClick={() => setWeekOffset(weekOffset - 1)}
-                className="p-2 rounded-lg border border-rule hover:bg-paper-2 text-forest transition-colors active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
+                className="p-2 rounded-lg border border-rule hover:bg-paper-2 text-forest transition-colors active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer shrink-0"
                 title="Periode sebelumnya"
                 aria-label="Periode sebelumnya"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-              <div className="px-3.5 py-1.5 rounded-lg bg-paper-2 border border-rule-subtle text-xs font-semibold text-forest min-w-[220px] text-center">
+              <div className="flex-1 sm:flex-initial px-2.5 sm:px-3.5 py-1.5 rounded-lg bg-paper-2 border border-rule-subtle text-[11px] sm:text-xs font-semibold text-forest min-w-0 sm:min-w-[200px] text-center truncate">
                 {getWeekLabel(weekOffset)}
               </div>
               <button
                 type="button"
                 onClick={() => setWeekOffset(weekOffset + 1)}
-                className="p-2 rounded-lg border border-rule hover:bg-paper-2 text-forest transition-colors active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
+                className="p-2 rounded-lg border border-rule hover:bg-paper-2 text-forest transition-colors active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer shrink-0"
                 title="Periode berikutnya"
                 aria-label="Periode berikutnya"
               >
@@ -123,7 +123,7 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
                 <button
                   type="button"
                   onClick={() => setWeekOffset(0)}
-                  className="px-2.5 py-1.5 rounded-lg text-xs font-semibold text-leaf hover:underline active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
+                  className="px-2 py-1.5 rounded-lg text-xs font-semibold text-leaf hover:underline active:scale-[0.99] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer shrink-0"
                 >
                   Hari ini
                 </button>
@@ -380,7 +380,7 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
                       }
                     }
                   }}
-                  className={`min-h-[70px] sm:min-h-[85px] p-2 rounded-lg border text-left flex flex-col justify-between transition-colors ${
+                  className={`min-h-[56px] sm:min-h-[85px] p-1.5 sm:p-2 rounded-lg border text-left flex flex-col justify-between transition-colors ${
                     d.isWeekend
                       ? 'bg-paper-2 border-rule-subtle text-muted cursor-not-allowed opacity-60'
                       : d.hasSampleMenu
@@ -396,13 +396,14 @@ export const MenuCalendar: React.FC<MenuCalendarProps> = ({ onOpenWhatsApp }) =>
                   </div>
                   <div>
                     {d.isWeekend ? (
-                      <span className="text-[11px] text-muted">Libur</span>
+                      <span className="text-[10px] sm:text-[11px] text-muted">Libur</span>
                     ) : d.hasSampleMenu ? (
-                      <span className="text-[11px] font-semibold text-forest block truncate">
-                        Contoh menu
+                      <span className="text-[10px] sm:text-[11px] font-semibold text-forest block truncate">
+                        <span className="hidden sm:inline">Contoh menu</span>
+                        <span className="sm:hidden text-fresh">• Menu</span>
                       </span>
                     ) : (
-                      <span className="text-[11px] text-muted block truncate">
+                      <span className="text-[10px] sm:text-[11px] text-muted block truncate">
                         TBA
                       </span>
                     )}
