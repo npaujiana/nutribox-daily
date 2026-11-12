@@ -2,43 +2,43 @@ import React from 'react';
 import { BusinessConfig } from '../../types';
 import { AlertCircle, Settings } from 'lucide-react';
 
-interface AboutNutriBoxProps {
+interface AboutUsProps {
   config: BusinessConfig;
   onOpenConfig: () => void;
   onNavigate: (tabId: string) => void;
 }
 
-export const AboutNutriBox: React.FC<AboutNutriBoxProps> = ({ config, onOpenConfig }) => {
+export const AboutUs: React.FC<AboutUsProps> = ({ config, onOpenConfig }) => {
   const brandValues = [
     {
       index: '01',
-      title: 'Nutrition Transparency',
-      desc: 'Transparansi estimasi kalori dan makronutrisi pada setiap box agar Anda memegang kendali penuh atas asupan harian.',
+      title: 'Cita Rasa Otentik',
+      desc: 'Bumbu rempah nusantara melimpah yang diolah dari bahan segar di hari H acara untuk kenikmatan rasa yang berkesan.',
     },
     {
       index: '02',
-      title: 'Freshness',
-      desc: 'Bahan baku segar dimasak setiap pagi hari kerja mulai pukul 06.00 WIB tanpa sisa makanan kemarin.',
+      title: '100% Halal & Higienis',
+      desc: 'Standar kebersihan dapur produksi komersial yang teruji, higienis, dan tersertifikasi halal.',
     },
     {
       index: '03',
-      title: 'Convenience',
-      desc: 'Kemasan siap santap yang praktis dikirim langsung ke meja kantor atau tempat tinggal Anda sebelum waktu makan siang.',
+      title: 'Disiplin Waktu H-1 Jam',
+      desc: 'Garansi pesanan tiba 60 menit sebelum acara dimulai, memberikan ketenangan dan kenyamanan bagi tuan rumah.',
     },
     {
       index: '04',
-      title: 'Consistency',
-      desc: 'Standar penimbangan porsi dan cita rasa yang konsisten di setiap hari pengiriman.',
+      title: 'Porsi Memuaskan',
+      desc: 'Takaran gramatur lauk utama dan karbohidrat yang pas mengenyangkan, dirancang memenuhi selera seluruh tamu undangan.',
     },
     {
       index: '05',
-      title: 'Variety',
-      desc: 'Menu berganti setiap minggu menghadirkan kreasi kuliner nusantara, Asia modern, dan western grill yang tidak monoton.',
+      title: 'Kemasan Rapi & Estetik',
+      desc: 'Mulai dari bento box bersekat anti-bocor hingga chafing dish pemanas roll-top stainless steel mewah.',
     },
     {
       index: '06',
-      title: 'Customer Focus',
-      desc: 'Layanan customer service yang responsif dan fleksibilitas penjadwalan katering sesuai dinamika aktivitas Anda.',
+      title: 'Konsultasi Menu Fleksibel',
+      desc: 'Kemudahan kustomisasi lauk, simulasi budget gratis, dan customer service yang ramah serta responsif.',
     },
   ];
 
@@ -48,36 +48,36 @@ export const AboutNutriBox: React.FC<AboutNutriBoxProps> = ({ config, onOpenConf
         {/* Page Hero: Heading leads directly */}
         <div className="max-w-3xl mb-8 sm:mb-14 text-left">
           <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-forest tracking-tight">
-            Makanan bernutrisi untuk rutinitas sehari-hari.
+            Sajian istimewa untuk setiap momen berharga Anda.
           </h1>
           <p className="mt-4 text-base sm:text-lg text-ink-2 leading-relaxed">
-            NutriBox Daily hadir untuk membantu masyarakat urban menikmati makanan bernutrisi dengan cara yang lebih praktis, lezat, dan transparan di tengah rutinitas kerja yang padat di BSD City dan Tangerang Selatan.
+            Nutribox Catering hadir menjadi mitra terpercaya penyedia konsumsi acara lezat, higienis, dan terorganisir rapi di BSD City, Tangerang Selatan, hingga seluruh Jabodetabek.
           </p>
         </div>
 
-        {/* Brand Philosophy: Nutri - Box - Daily */}
+        {/* Service Philosophy: Lezat - Tepat Waktu - Bebas Repot */}
         <div className="bg-forest text-white rounded-xl p-8 sm:p-10 mb-14 shadow-xs text-left">
           <div className="max-w-3xl">
             <h2 className="font-display font-bold text-2xl sm:text-3xl text-white mb-6">
-              Makna di balik nama NutriBox Daily
+              Tiga Pilar Layanan Katering Kami
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="p-4 rounded-lg bg-paper-elevated/10 border border-white/20">
-                <span className="font-display font-black text-2xl text-citrus block">Nutri</span>
+                <span className="font-display font-black text-2xl text-citrus block">Kelezatan</span>
                 <p className="text-xs text-sage mt-2 leading-relaxed">
-                  Perhatian mendalam terhadap kualitas nutrisi, kebersihan bahan baku, dan keseimbangan zat gizi tubuh.
+                  Perhatian mendalam terhadap racikan bumbu rempah alami, kematangan daging sempurna, dan rasa gurih yang disukai seluruh generasi tamu.
                 </p>
               </div>
               <div className="p-4 rounded-lg bg-paper-elevated/10 border border-white/20">
-                <span className="font-display font-black text-2xl text-leaf block">Box</span>
+                <span className="font-display font-black text-2xl text-leaf block">Tepat Waktu</span>
                 <p className="text-xs text-sage mt-2 leading-relaxed">
-                  Makanan higienis siap santap dalam kemasan rapi yang mudah dinikmati di mana saja tanpa repot.
+                  Disiplin pengantaran dengan garansi tiba H-1 jam sebelum acara dimulai, tanpa membuat panik tuan rumah dan panitia.
                 </p>
               </div>
               <div className="p-4 rounded-lg bg-paper-elevated/10 border border-white/20">
-                <span className="font-display font-black text-2xl text-white block">Daily</span>
+                <span className="font-display font-black text-2xl text-white block">Bebas Repot</span>
                 <p className="text-xs text-sage mt-2 leading-relaxed">
-                  Membangun kebiasaan makan sehat yang berkesinambungan dan menyatu dengan rutinitas harian Anda.
+                  Layanan terpadu lengkap meja buffet bercover, chafing dish pemanas, alat makan keramik, hingga staf pramusaji profesional.
                 </p>
               </div>
             </div>
@@ -89,23 +89,23 @@ export const AboutNutriBox: React.FC<AboutNutriBoxProps> = ({ config, onOpenConf
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-6 space-y-4 text-left">
               <h2 className="font-display font-bold text-2xl sm:text-3xl text-forest">
-                Menghapus gesekan dalam menjaga pola makan sehat.
+                Membantu setiap tuan rumah menjamu tamu dengan percaya diri.
               </h2>
               <p className="text-xs sm:text-sm text-ink-2 leading-relaxed">
-                NutriBox Daily berawal dari pengamatan terhadap kebiasaan pekerja kantoran di kawasan Tangerang Selatan dan sekitarnya yang sering kesulitan mendapatkan makan siang sehat karena keterbatasan waktu persiapan di pagi hari dan minimnya pilihan makan siang terukur di sekitar kantor.
+                Nutribox Catering berawal dari pemahaman mendalam tentang betapa menantangnya mengelola konsumsi sebuah acara. Kekhawatiran makanan datang terlambat, rasa yang mengecewakan, atau porsi yang kurang seringkali menjadi beban pikiran terbesar bagi tuan rumah dan panitia acara kantor.
               </p>
               <p className="text-xs sm:text-sm text-ink-2 leading-relaxed">
-                Di sisi lain, masyarakat yang sedang berupaya mengelola berat badan atau menjalani rutinitas olahraga rutin kerap kesulitan mengetahui kandungan kalori, garam, dan minyak dari makanan yang mereka beli di luar.
+                Kami hadir dengan sistem dapur produksi berstandar komersial dan armada pengantaran berinsulasi suhu untuk memastikan setiap box dan setiap meja prasmanan tersaji dalam kondisi hangat, harum, dan tertata rapi.
               </p>
               <p className="text-xs sm:text-sm leading-relaxed font-semibold text-forest">
-                Dari kebutuhan nyata tersebut, NutriBox Daily dikembangkan sebagai layanan katering makan siang personal yang mengedepankan kepraktisan santap, transparansi nutrisi, dan konsistensi kualitas tanpa penambahan MSG.
+                Mulai dari syukuran keluarga 15 orang hingga resepsi pesta 500+ tamu, kami berkomitmen memberikan pengalaman kuliner terbaik yang membanggakan Anda di depan para tamu undangan.
               </p>
             </div>
 
             <div className="lg:col-span-6 rounded-lg overflow-hidden aspect-[4/3] bg-paper-2 border border-rule-subtle shadow-xs">
               <img
-                src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=1000&q=80"
-                alt="Bahan baku segar NutriBox Daily"
+                src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1000&q=80"
+                alt="Layanan katering prasmanan acara"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -117,10 +117,10 @@ export const AboutNutriBox: React.FC<AboutNutriBoxProps> = ({ config, onOpenConf
         <div className="mb-14">
           <div className="max-w-2xl mb-8 text-left">
             <h2 className="font-display font-bold text-2xl sm:text-3xl text-forest">
-              Enam nilai utama NutriBox Daily
+              Enam Komitmen Layanan Kami
             </h2>
             <p className="text-xs sm:text-sm text-ink-2 mt-2">
-              Prinsip kerja yang membimbing setiap keputusan di dapur dan operasional layanan kami.
+              Prinsip kerja yang membimbing setiap hidangan dan pelayanan tim kami di lapangan.
             </p>
           </div>
 
@@ -144,12 +144,12 @@ export const AboutNutriBox: React.FC<AboutNutriBoxProps> = ({ config, onOpenConf
           </div>
         </div>
 
-        {/* Founder Section (Strictly respecting Section 11.3 & 19.5 of master prompt) */}
+        {/* Founder Section */}
         <div className="bg-paper border border-rule rounded-xl p-8 sm:p-10 mb-14 shadow-xs text-left">
           <div className="flex items-center justify-between pb-4 border-b border-rule-subtle mb-6">
             <div>
               <h2 className="font-display font-bold text-xl text-forest">
-                Manajemen NutriBox Daily
+                Tim Manajemen Operasional
               </h2>
             </div>
             <button
@@ -184,10 +184,10 @@ export const AboutNutriBox: React.FC<AboutNutriBoxProps> = ({ config, onOpenConf
               <AlertCircle className="w-5 h-5 text-terracotta shrink-0 mt-0.5" />
               <div>
                 <h3 className="font-display font-semibold text-sm text-forest">
-                  Status verifikasi profil publik: tahap penyelarasan legalitas internal
+                  Profil Manajemen Operasional Kuliner
                 </h3>
                 <p className="text-xs text-ink-2 mt-1 leading-relaxed">
-                  Sesuai pedoman integritas data bisnis, informasi publikasi profil pimpinan dan pendiri ({config.founder.name}, {config.founder.role}) disiapkan dalam status pratinjau dan baru dipublikasikan secara penuh setelah konfirmasi badan hukum bisnis diselesaikan.
+                  Dikelola oleh tim kuliner berpengalaman di bawah kepemimpinan {config.founder.name} ({config.founder.role}), dengan komitmen menghadirkan cita rasa bintang lima dan ketepatan waktu pengantaran di setiap acara Anda.
                 </p>
                 <div className="mt-3">
                   <button
@@ -195,7 +195,7 @@ export const AboutNutriBox: React.FC<AboutNutriBoxProps> = ({ config, onOpenConf
                     onClick={onOpenConfig}
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-paper border border-rule text-forest text-xs font-semibold hover:bg-paper-2 active:scale-[0.99] disabled:opacity-50 transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
                   >
-                    <span>Buka panel verifikasi</span>
+                    <span>Buka panel verifikasi profil</span>
                   </button>
                 </div>
               </div>
@@ -206,10 +206,10 @@ export const AboutNutriBox: React.FC<AboutNutriBoxProps> = ({ config, onOpenConf
         {/* Operating Kitchen Notice */}
         <div className="p-6 rounded-xl bg-paper-2 border border-rule-subtle text-xs text-ink-2 space-y-1 text-left">
           <p className="font-semibold text-forest">
-            Catatan fasilitas dan sertifikasi:
+            Fasilitas dapur dan sertifikasi halal:
           </p>
           <p className="leading-relaxed">
-            NutriBox Daily mengoperasikan dapur katering khusus meal preparation tertutup di kawasan BSD City. Makanan diproduksi segar setiap pagi tanpa penambahan MSG. Seluruh klaim nutrisi dihitung berdasarkan porsi resep terstandar, bukan klaim medis atau klaim fasilitas bebas alergen total.
+            Dapur katering kami berlokasi di Central Production Kitchen BSD City dengan kapasitas produksi hingga 1.500+ porsi per hari. Makanan diolah segar di hari H acara menggunakan bahan baku 100% Halal dengan standar sanitasi dapur komersial terpadu.
           </p>
         </div>
       </div>

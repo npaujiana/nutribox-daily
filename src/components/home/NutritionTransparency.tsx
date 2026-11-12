@@ -12,35 +12,35 @@ export const NutritionTransparency: React.FC = () => {
           {/* Left Column: Heading & Transparency Philosophy */}
           <div className="lg:col-span-5 space-y-5 text-left">
             <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-forest tracking-tight leading-tight">
-              Tahu persis kandungan nutrisi di setiap porsi.
+              Standar porsi kenyang & dapur higienis teruji.
             </h2>
             <p className="text-sm sm:text-base text-ink-2 leading-relaxed">
-              Setiap menu dilengkapi estimasi kalori dan makronutrisi agar Anda dapat mengelola asupan harian dengan penuh kepastian dan ketenangan pikiran.
+              Kami memahami bahwa kepuasan tamu adalah prioritas utama tuan rumah. Setiap paket disiapkan dengan takaran lauk melimpah, sayur segar olahan hari H, dan standar kebersihan tertinggi.
             </p>
 
             <div className="space-y-3 pt-2">
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-fresh shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm text-ink-2">
-                  <strong className="font-semibold text-forest">Penimbangan porsi terstandar:</strong> Protein, karbohidrat, dan sayuran ditimbang dengan timbangan digital presisi di dapur produksi.
+                  <strong className="font-semibold text-forest">Gramatur lauk utama terstandar:</strong> Potongan ayam, daging, atau ikan ditimbang secara presisi agar seluruh porsi seragam dan mengenyangkan.
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-fresh shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm text-ink-2">
-                  <strong className="font-semibold text-forest">Resep bersih dan terbuka:</strong> Tanpa penambahan MSG, pewarna kimia, atau pemanis buatan berlebih.
+                  <strong className="font-semibold text-forest">Bahan segar 100% Halal:</strong> Bumbu rempah asli nusantara dihaluskan segar setiap pagi tanpa bahan pengawet atau pewarna sintesis.
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-fresh shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm text-ink-2">
-                  <strong className="font-semibold text-forest">Mendukung pola makan teratur:</strong> Memudahkan Anda menghitung jatah kalori saat bekerja di kantor maupun di rumah.
+                  <strong className="font-semibold text-forest">Kemasan food-grade anti-tumpah:</strong> Bento box bersekat rapi dan wadah sup bersegel menjaga aroma hangat dan kesegaran makanan.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Visual Macro Breakdown Card */}
+          {/* Right Column: Visual Composition Breakdown Card */}
           <div className="lg:col-span-7">
             <div className="bg-paper border border-rule rounded-xl p-6 sm:p-8 shadow-xs">
               {/* Header */}
@@ -50,77 +50,77 @@ export const NutritionTransparency: React.FC = () => {
                     {example.name}
                   </h3>
                   <p className="text-xs text-ink-2 mt-0.5">
-                    Contoh formulasi porsi makan siang
+                    Standar komposisi paket nasi kotak acara & rapat
                   </p>
                 </div>
                 <span className="px-3 py-1 rounded-md bg-paper-2 border border-rule text-forest text-xs font-semibold">
-                  Kategori: {example.category}
+                  {example.portionInfo}
                 </span>
               </div>
 
-              {/* Energy Summary Hero Number */}
+              {/* Energy & Satisfaction Summary Hero Number */}
               <div className="bg-paper-2 rounded-lg p-5 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4 border border-rule-subtle">
                 <div>
-                  <span className="text-xs text-ink-2 block">Estimasi total energi per box:</span>
-                  <div className="flex items-baseline gap-2 mt-0.5 tabular-nums">
-                    <span className="font-display font-black text-4xl sm:text-5xl text-forest">
-                      {example.calories}
+                  <span className="text-xs text-ink-2 block">Standar porsi makan:</span>
+                  <div className="flex items-baseline gap-2 mt-0.5">
+                    <span className="font-display font-black text-3xl sm:text-4xl text-forest">
+                      Porsi Kenyang
                     </span>
-                    <span className="text-sm font-semibold text-ink-2">kcal per porsi</span>
+                    <span className="text-sm font-semibold text-ink-2">Dewasa</span>
                   </div>
                 </div>
                 <div className="text-right w-full sm:w-auto">
                   <span className="inline-block px-3 py-1 rounded-md bg-forest text-white text-xs font-semibold">
-                    1 Porsi Siap Santap
+                    100% Halal & Higienis
                   </span>
                 </div>
               </div>
 
-              {/* Macronutrients Progress Bars & Breakdown */}
+              {/* Composition Elements Progress / List */}
               <div className="space-y-4 mb-6">
-                {/* Protein */}
+                {/* Lauk Utama */}
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1">
                     <span className="font-semibold text-forest flex items-center gap-1.5">
                       <span className="w-2.5 h-2.5 rounded-full bg-fresh"></span>
-                      Protein
+                      Lauk Utama Protein
                     </span>
-                    <span className="font-bold text-forest tabular-nums">{example.protein} gram</span>
+                    <span className="font-bold text-forest">Ayam Pejantan Pilihan</span>
                   </div>
                   <div className="w-full h-2 bg-paper-2 border border-rule-subtle rounded-full overflow-hidden">
-                    <div className="h-full bg-fresh rounded-full" style={{ width: '65%' }} />
+                    <div className="h-full bg-fresh rounded-full" style={{ width: '85%' }} />
                   </div>
-                  <span className="text-xs text-ink-2">Dada ayam fillet tanpa kulit dan bumbu rempah alami</span>
+                  <span className="text-xs text-ink-2">Ayam bakar madu karamelisasi bumbu rempah kelapa gurih</span>
                 </div>
 
-                {/* Carbohydrates */}
+                {/* Karbohidrat */}
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1">
                     <span className="font-semibold text-forest flex items-center gap-1.5">
                       <span className="w-2.5 h-2.5 rounded-full bg-citrus"></span>
-                      Karbohidrat kompleks
+                      Karbohidrat Pulen
                     </span>
-                    <span className="font-bold text-forest tabular-nums">{example.carbohydrates} gram</span>
+                    <span className="font-bold text-forest">Nasi Putih Pandan Wangi</span>
                   </div>
                   <div className="w-full h-2 bg-paper-2 border border-rule-subtle rounded-full overflow-hidden">
-                    <div className="h-full bg-citrus rounded-full" style={{ width: '75%' }} />
+                    <div className="h-full bg-citrus rounded-full" style={{ width: '80%' }} />
                   </div>
-                  <span className="text-xs text-ink-2">Nasi beras merah pilihan berindeks glikemik stabil</span>
+                  <span className="text-xs text-ink-2">Dimasak dengan daun pandan alami, pulen hangat dan wangi</span>
                 </div>
 
-                {/* Fat */}
+                {/* Pelengkap & Lalapan */}
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1">
                     <span className="font-semibold text-forest flex items-center gap-1.5">
                       <span className="w-2.5 h-2.5 rounded-full bg-terracotta"></span>
-                      Lemak sehat
+                      Lauk Pendamping & Sambal
                     </span>
-                    <span className="font-bold text-forest tabular-nums">{example.fat} gram</span>
+                    <span className="font-bold text-forest">Tahu Tempe Bacem & Lalapan</span>
                   </div>
                   <div className="w-full h-2 bg-paper-2 border border-rule-subtle rounded-full overflow-hidden">
-                    <div className="h-full bg-terracotta rounded-full" style={{ width: '35%' }} />
+                    <div className="h-full bg-terracotta rounded-full" style={{ width: '70%' }} />
                   </div>
-                  <span className="text-xs text-ink-2">Minyak kelapa sawit/zaitun takaran rendah untuk menumis</span>
+                  <span className="text-xs text-ink-2">Lengkap kerupuk udang renyah, sendok garpu & tisu higienis</span>
                 </div>
               </div>
 
@@ -128,7 +128,7 @@ export const NutritionTransparency: React.FC = () => {
               <div className="pt-4 border-t border-rule-subtle flex items-start gap-2.5 text-[11px] text-ink-2">
                 <Info className="w-4 h-4 text-terracotta shrink-0 mt-0.5" />
                 <p>
-                  *Angka nutrisi merupakan estimasi berdasarkan takaran resep bahan mentah standar. Nilai aktual dapat sedikit bervariasi pada setiap proses memasak.
+                  *Pilihan jenis sayuran, sambal, atau modifikasi lauk dapat dikonsultasikan secara fleksibel kepada tim sales katering kami.
                 </p>
               </div>
             </div>

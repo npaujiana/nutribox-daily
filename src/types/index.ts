@@ -1,4 +1,4 @@
-export type MealCategory = 'balance' | 'lean' | 'protein' | 'active';
+export type MealCategory = 'box' | 'buffet' | 'snack' | 'tumpeng' | 'balance' | 'lean' | 'protein' | 'active';
 
 export interface Product {
   id: string;
@@ -9,8 +9,9 @@ export interface Product {
   categoryLabel: string;
   price: number;
   formattedPrice: string;
-  caloriesRange: string;
-  caloriesEstimate: number; // median for display
+  caloriesRange?: string;
+  caloriesEstimate?: number;
+  portionInfo?: string; // e.g. "Min. 15 Pax", "Porsi 20–25 Orang"
   proteinEstimate?: string;
   carbsEstimate?: string;
   fatEstimate?: string;
@@ -18,7 +19,7 @@ export interface Product {
   badge?: string;
   ingredients: string[];
   features: string[];
-  nutritionNote: string;
+  nutritionNote?: string;
 }
 
 export interface CalendarMenuItem {
@@ -30,10 +31,11 @@ export interface CalendarMenuItem {
   image: string;
   category: MealCategory;
   categoryLabel: string;
-  calories: number;
-  protein: number;
-  carbohydrates: number;
-  fat: number;
+  calories?: number;
+  protein?: number;
+  carbohydrates?: number;
+  fat?: number;
+  portionInfo?: string;
   isPublished: boolean;
   isExample: boolean;
   composition: string[];
@@ -42,9 +44,9 @@ export interface CalendarMenuItem {
 export interface PlanPricing {
   category: MealCategory;
   label: string;
-  dailyPrice: number;
-  weeklyPrice: number; // 5 days
-  monthlyPrice: number; // 20 days
+  dailyPrice: number; // price per pax for small events
+  weeklyPrice: number; // price for medium events (e.g. 50 pax)
+  monthlyPrice: number; // price for large events (e.g. 100 pax)
   features: string[];
 }
 

@@ -14,11 +14,11 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenWhatsApp }) => {
           {/* Left Column: Bold Headline & Editorial Story */}
           <div className="lg:col-span-7 text-left">
             <h1 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-forest tracking-tight leading-[1.1]">
-              Katering makan siang sehat, kalori terukur.
+              Sajian lezat & berkesan untuk berbagai acara istimewa.
             </h1>
 
             <p className="mt-4 sm:mt-5 text-sm sm:text-lg text-ink-2 leading-relaxed">
-              Menu berganti setiap minggu, tanpa tambahan MSG, dan tiba sebelum jam makan siang di BSD City serta Tangerang Selatan.
+              Pilihan Nasi Kotak, Prasmanan, Snack Box, dan Tumpeng Syukuran dengan cita rasa otentik, porsi mengenyangkan, dan tiba tepat waktu di BSD City & Jabodetabek.
             </p>
 
             {/* Action Group: One Dominant CTA + Clean Secondary Link */}
@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenWhatsApp }) => {
                 onClick={() => onNavigate('catalog')}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-forest hover:bg-forest-hover active:scale-[0.99] disabled:opacity-50 text-white font-semibold text-sm shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
               >
-                <span>Lihat Menu & Pesan</span>
+                <span>Lihat Menu Acara & Pesan</span>
                 <ArrowRight className="w-4 h-4 text-fresh" />
               </button>
 
@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenWhatsApp }) => {
                 onClick={() => onNavigate('subscription')}
                 className="inline-flex items-center justify-center text-sm font-semibold text-forest border-b-2 border-forest pb-0.5 hover:text-fresh hover:border-fresh active:scale-[0.99] disabled:opacity-50 transition-colors cursor-pointer whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
               >
-                <span>Paket Langganan 5 & 20 Hari</span>
+                <span>Pilihan Paket Acara (15–200+ Pax)</span>
               </button>
             </div>
 
@@ -45,15 +45,15 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenWhatsApp }) => {
             <div className="mt-8 pt-6 border-t border-rule-subtle grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-ink-2">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-fresh shrink-0" />
-                <span>Dimasak segar jam 06.00</span>
+                <span>Dimasak segar di hari H</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-fresh shrink-0" />
-                <span>Tanpa penambahan MSG</span>
+                <span>100% Halal & higienis</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-fresh shrink-0" />
-                <span>Kirim 10.30 sampai 11.45 WIB</span>
+                <span>Garansi tiba H-1 jam acara</span>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenWhatsApp }) => {
               <div className="relative aspect-[4/3] sm:aspect-square overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=85"
-                  alt="NutriBox Daily Grilled Chicken Brown Rice Bowl"
+                  alt="Paket Nasi Kotak Ayam Bakar Madu Spesial"
                   className="w-full h-full object-cover object-center"
                   loading="eager"
                   fetchPriority="high"
@@ -75,18 +75,18 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenWhatsApp }) => {
               <div className="p-4 bg-paper border-t border-rule flex items-center justify-between text-left">
                 <div>
                   <h2 className="font-display font-bold text-sm text-forest">
-                    Grilled Chicken Rice Bowl
+                    Nasi Kotak Ayam Bakar Madu
                   </h2>
                   <p className="text-xs text-ink-2 mt-0.5">
-                    Kategori Daily Balance • Nasi merah & sayur segar
+                    Lengkap lalapan segar, sambal bajak & kerupuk • Min. 15 box
                   </p>
                 </div>
                 <div className="text-right tabular-nums">
                   <span className="font-display font-extrabold text-sm text-forest block">
-                    485 kcal
+                    Rp35.000
                   </span>
                   <span className="text-[11px] text-fresh font-semibold block">
-                    38g Protein
+                    Porsi Kenyang
                   </span>
                 </div>
               </div>

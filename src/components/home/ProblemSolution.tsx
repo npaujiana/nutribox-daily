@@ -8,43 +8,43 @@ interface ProblemSolutionProps {
 export const ProblemSolution: React.FC<ProblemSolutionProps> = ({ onNavigate }) => {
   const problems = [
     {
-      title: 'Tidak sempat menyiapkan bekal',
-      desc: 'Waktu pagi habis di perjalanan, sementara memasak dan meal prep mandiri menyita waktu istirahat.',
+      title: 'Cemas porsi makanan kurang untuk tamu',
+      desc: 'Menghitung kebutuhan konsumsi sering membingungkan, takut tamu kelaparan atau sebaliknya makanan terbuang mubazir.',
     },
     {
-      title: 'Sulit mengetahui kandungan nutrisi',
-      desc: 'Makanan pesan antar atau warung sekitar jarang memiliki takaran kalori, garam, dan minyak yang jelas.',
+      title: 'Khawatir makanan tiba terlambat',
+      desc: 'Acara sudah dimulai tapi konsumsi belum sampai, menimbulkan kepanikan panitia dan merusak wibawa tuan rumah.',
     },
     {
-      title: 'Sulit menjaga konsistensi pola makan',
-      desc: 'Niat makan sehat sering terhenti karena ketiadaan jadwal katering yang teratur dan praktis.',
+      title: 'Rasa kurang lezat & kemasan berantakan',
+      desc: 'Sajian hambar atau wadah box berminyak dan bocor mengurangi kenyamanan para tamu kehormatan.',
     },
     {
-      title: 'Bosan dengan menu yang monoton',
-      desc: 'Katering konvensional menyajikan olahan berulang yang cepat membuat jenuh setelah beberapa hari.',
+      title: 'Repot masak & sewa alat saji sendiri',
+      desc: 'Menyiapkan konsumsi untuk 20 hingga 200+ orang menyita tenaga, waktu istirahat, dan membutuhkan perlengkapan rumit.',
     },
   ];
 
   const solutions = [
     {
       step: '01',
-      title: 'Siap santap di meja kantor',
-      desc: 'Pengantaran tiba 10.30 sampai 11.45 WIB, siap dinikmati tanpa perlu antre saat jam istirahat.',
+      title: 'Konsultasi Porsi & Budget Gratis',
+      desc: 'Bantuan estimasi porsi presisi dan buffer cadangan aman agar seluruh tamu tercukupi tanpa over-budget.',
     },
     {
       step: '02',
-      title: 'Nutrisi terukur transparan',
-      desc: 'Estimasi kalori dan makronutrisi tercantum jelas di setiap box untuk mendukung target pola makan Anda.',
+      title: 'Garansi Tepat Waktu H-1 Jam',
+      desc: 'Pesanan tiba 60 menit sebelum acara, tertata rapi, dan siap dinikmati tepat saat sesi makan dimulai.',
     },
     {
       step: '03',
-      title: 'Rotasi menu mingguan',
-      desc: 'Variasi olahan nusantara modern, fusion Asia, dan western grill yang berganti setiap minggu.',
+      title: 'Rasa Lezat & Kemasan Anti-Tumpah',
+      desc: 'Olahan bumbu rempah otentik dengan bento box modern bersekat atau chafing dish pemanas stainless steel mewah.',
     },
     {
       step: '04',
-      title: 'Langganan fleksibel',
-      desc: 'Pilihan paket 5 hari atau 20 hari kerja dengan opsi pause bila Anda sedang dinas keluar kota.',
+      title: 'Layanan All-In Tanpa Repot',
+      desc: 'Pilihan paket lengkap mencakup meja buffet bercover, sendok piring, pemanas, hingga staf pramusaji profesional.',
     },
   ];
 
@@ -54,20 +54,20 @@ export const ProblemSolution: React.FC<ProblemSolutionProps> = ({ onNavigate }) 
         {/* Section Header: Heading leads directly */}
         <div className="max-w-3xl mb-14 text-left">
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-forest tracking-tight leading-tight">
-            Jadwal kerja padat bukan alasan untuk mengorbankan makan sehat.
+            Suksesnya sebuah acara berawal dari sajian yang memuaskan tamu.
           </h2>
           <p className="mt-4 text-base text-ink-2 leading-relaxed">
-            Di tengah ritme dinamis kawasan BSD City dan Tangerang Selatan, NutriBox Daily dirancang untuk menghapus kerepotan persiapan makan siang sehari-hari.
+            Dari syukuran keluarga, rapat kantor penting, seminar, hingga resepsi pernikahan di kawasan BSD City dan Jabodetabek, kami hadir memastikan kebutuhan konsumsi Anda terkelola sempurna.
           </p>
         </div>
 
         {/* Asymmetrical 12-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          {/* Left Column: Real Workplace Obstacles (5 Cols) */}
+          {/* Left Column: Real Host Obstacles (5 Cols) */}
           <div className="lg:col-span-5 bg-paper border border-rule rounded-xl p-6 sm:p-8 flex flex-col justify-between shadow-xs">
             <div>
               <h3 className="font-display font-bold text-xl text-forest mb-6">
-                Mengapa pola makan sehat sering terhenti di tengah jalan?
+                Kekhawatiran utama saat mengatur konsumsi acara:
               </h3>
 
               <div className="space-y-4">
@@ -85,18 +85,18 @@ export const ProblemSolution: React.FC<ProblemSolutionProps> = ({ onNavigate }) 
             </div>
 
             <p className="mt-8 text-xs text-ink-2 border-t border-rule-subtle pt-4">
-              NutriBox Daily hadir untuk menghapus gesekan ini dari rutinitas harian Anda.
+              Kami menghilangkan seluruh kerepotan tersebut agar Anda dapat fokus menyambut tamu dengan tenang.
             </p>
           </div>
 
-          {/* Right Column: NutriBox Daily Structured System (7 Cols) */}
+          {/* Right Column: Structured System (7 Cols) */}
           <div className="lg:col-span-7 bg-forest text-white rounded-xl p-6 sm:p-10 flex flex-col justify-between shadow-xs">
             <div>
               <h3 className="font-display font-bold text-2xl sm:text-3xl text-white mb-4">
-                Makanan terukur, rasa lezat, dan tiba tepat waktu.
+                Sajian berkelas, rasa teruji, dan pelayanan terpercaya.
               </h3>
               <p className="text-sm text-sage leading-relaxed mb-8">
-                Kami menggabungkan prinsip gizi seimbang dengan cita rasa kuliner modern. Dimasak segar setiap pagi tanpa penambahan MSG, ditimbang secara proporsional, dan diantar langsung ke meja kantor Anda.
+                Kami menggabungkan kelezatan masakan tradisional & modern dengan manajemen pengantaran disiplin. Dimasak dari bahan baku segar di hari H, higienis, dan disajikan dengan standar kebersihan tertinggi.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -118,14 +118,14 @@ export const ProblemSolution: React.FC<ProblemSolutionProps> = ({ onNavigate }) 
 
             <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap items-center justify-between gap-4">
               <span className="text-xs text-sage">
-                Tersedia pesanan satuan (1 box) dan paket langganan mingguan.
+                Tersedia pesanan Nasi Kotak (min. 15 box) hingga Prasmanan (50–200+ pax).
               </span>
               <button
                 type="button"
                 onClick={() => onNavigate('catalog')}
                 className="inline-flex items-center gap-2 text-xs font-semibold text-citrus hover:text-white active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fresh cursor-pointer"
               >
-                <span className="whitespace-nowrap">Lihat semua menu</span>
+                <span className="whitespace-nowrap">Lihat semua menu acara</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

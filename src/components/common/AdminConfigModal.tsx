@@ -53,7 +53,7 @@ export const AdminConfigModal: React.FC<AdminConfigModalProps> = ({
                 Pusat konfigurasi kontak dan verifikasi bisnis
               </h3>
               <p className="text-xs text-ink-muted">
-                Kelola status rilis operasional dan verifikasi saluran komunikasi NutriBox Daily
+                Kelola status rilis operasional dan verifikasi saluran komunikasi katering kami
               </p>
             </div>
           </div>

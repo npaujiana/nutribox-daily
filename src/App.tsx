@@ -27,7 +27,7 @@ import { ProductCatalog } from './components/catalog/ProductCatalog';
 import { MenuCalendar } from './components/calendar/MenuCalendar';
 import { SubscriptionPlans } from './components/subscription/SubscriptionPlans';
 import { CalorieCalculator } from './components/calculator/CalorieCalculator';
-import { AboutNutriBox } from './components/about/AboutNutriBox';
+import { AboutUs } from './components/about/AboutUs';
 import { FAQPage } from './components/faq/FAQPage';
 import { ContactPage } from './components/contact/ContactPage';
 
@@ -69,7 +69,7 @@ export default function App() {
   };
 
   const handleOpenWhatsApp = (customMessage?: string) => {
-    const defaultMsg = `Halo NutriBox Daily, saya ingin menanyakan informasi pemesanan katering sehat untuk area BSD City & Tangsel.
+    const defaultMsg = `Halo Nutribox Catering, saya ingin menanyakan informasi pemesanan katering acara (nasi kotak / prasmanan / snack box / tumpeng) untuk area BSD City & Jabodetabek.
 
 Terima kasih.`;
 
@@ -146,7 +146,7 @@ Terima kasih.`;
         )}
 
         {currentTab === 'about' && (
-          <AboutNutriBox
+          <AboutUs
             config={config}
             onOpenConfig={() => setIsAdminConfigOpen(true)}
             onNavigate={handleNavigate}

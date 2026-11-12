@@ -56,7 +56,7 @@ export const FAQPage: React.FC<FAQPageProps> = ({ onOpenWhatsApp }) => {
             Frequently asked questions.
           </h1>
           <p className="mt-3 text-sm sm:text-base text-ink-2 leading-relaxed">
-            Temukan jawaban lengkap mengenai menu, pengiriman kurir, sistem langganan, dan kebijakan operasional NutriBox Daily.
+            Temukan jawaban lengkap mengenai menu acara, ketentuan minimal pemesanan, paket prasmanan lengkap, pengantaran ke venue, dan kebijakan pembayaran.
           </p>
 
           {/* Search Input */}
@@ -65,7 +65,7 @@ export const FAQPage: React.FC<FAQPageProps> = ({ onOpenWhatsApp }) => {
             <input
               type="text"
               aria-label="Cari pertanyaan"
-              placeholder="Cari pertanyaan... (misal: kalori, pengiriman, gopay)"
+              placeholder="Cari pertanyaan... (misal: prasmanan, minimal order, DP)"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-3 rounded-lg border border-rule bg-paper text-xs sm:text-sm text-ink shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
@@ -153,13 +153,13 @@ export const FAQPage: React.FC<FAQPageProps> = ({ onOpenWhatsApp }) => {
             Punya Pertanyaan Lain yang Belum Terjawab?
           </h3>
           <p className="text-xs sm:text-sm text-white/85 max-w-md mx-auto leading-relaxed">
-            Tim Customer Service NutriBox Daily siap membantu Anda mengenai ketersediaan rute kurir, pesanan khusus, atau detail rotasi menu.
+            Tim Customer Service kami siap membantu Anda mengenai ketersediaan tanggal acara, custom menu, penawaran harga instansi, atau food tasting.
           </p>
           <button
             type="button"
             onClick={() =>
               onOpenWhatsApp(
-                'Halo NutriBox Daily, saya ingin menanyakan hal yang belum tertera di halaman FAQ website.'
+                'Halo Nutribox Catering, saya ingin menanyakan hal mengenai pemesanan acara yang belum tertera di halaman FAQ.'
               )
             }
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white hover:bg-white/95 active:scale-[0.99] disabled:opacity-50 text-forest font-bold text-xs sm:text-sm shadow-sm transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"

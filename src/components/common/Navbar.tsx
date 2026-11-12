@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight, Leaf, Settings, Salad } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Settings, UtensilsCrossed } from 'lucide-react';
 import { BusinessConfig } from '../../types';
 
 interface NavbarProps {
@@ -31,9 +31,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   const navItems = [
     { id: 'home', label: 'Beranda' },
     { id: 'catalog', label: 'Menu & Katalog' },
-    { id: 'calendar', label: 'Kalender Menu' },
-    { id: 'subscription', label: 'Paket Langganan' },
-    { id: 'calculator', label: 'Kalkulator Kalori' },
+    { id: 'calendar', label: 'Jadwal Menu' },
+    { id: 'subscription', label: 'Paket Acara' },
+    { id: 'calculator', label: 'Kalkulator Acara' },
     { id: 'about', label: 'Tentang Kami' },
     { id: 'faq', label: 'FAQ' },
     { id: 'contact', label: 'Kontak' },
@@ -47,7 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const displayPhone = config.whatsapp.number.trim().length > 5
     ? config.whatsapp.number
-    : '+62 812-7788-9911';
+    : '+62 812-8899-7700';
 
   return (
     <>
@@ -55,12 +55,12 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Top Announcement Bar */}
         <div className="bg-forest text-white border-b border-forest-hover/60 py-1.5 sm:py-2 px-3 sm:px-6 lg:px-8 text-xs">
           <div className="max-w-7xl mx-auto">
-            {/* Mobile View (compact single row) */}
+            {/* Mobile View */}
             <div className="flex md:hidden items-center justify-between gap-2 text-[11px]">
               <div className="flex items-center gap-1.5 min-w-0">
-                <Salad className="w-3.5 h-3.5 text-fresh shrink-0" aria-hidden="true" />
+                <UtensilsCrossed className="w-3.5 h-3.5 text-fresh shrink-0" aria-hidden="true" />
                 <span className="font-semibold text-white truncate">
-                  Delivery Jabodetabek
+                  Katering Acara Jabodetabek
                 </span>
               </div>
               <div className="flex items-center gap-2 shrink-0">
@@ -74,23 +74,21 @@ export const Navbar: React.FC<NavbarProps> = ({
               </div>
             </div>
 
-            {/* Desktop / Tablet View (full two-sided layout) */}
+            {/* Desktop / Tablet View */}
             <div className="hidden md:flex items-center justify-between gap-4 text-left">
-              {/* Left: Fresh Daily Delivery Across Greater Jakarta */}
               <div className="flex items-center gap-2 flex-wrap">
-                <Salad className="w-3.5 h-3.5 text-fresh shrink-0" aria-hidden="true" />
+                <UtensilsCrossed className="w-3.5 h-3.5 text-fresh shrink-0" aria-hidden="true" />
                 <span className="font-semibold text-white">
-                  Fresh Daily Delivery Across Greater Jakarta
+                  Layanan Katering Acara, Prasmanan & Nasi Kotak
                 </span>
                 <span className="text-white/80 hidden lg:inline">
-                  (Jakarta, Tangerang, BSD, Bekasi, Depok)
+                  (BSD City, Tangerang, Jakarta, Depok, Bekasi)
                 </span>
               </div>
 
-              {/* Right: Direct WhatsApp Hotline & Halal Certified Kitchen */}
               <div className="flex items-center gap-3 text-xs">
                 <div className="flex items-center gap-1.5 text-white/85">
-                  <span>Direct WhatsApp Hotline:</span>
+                  <span>Hotline Pemesanan:</span>
                   <button
                     type="button"
                     onClick={() => onOpenWhatsApp()}
@@ -101,7 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </div>
                 <span className="text-white/30 select-none">|</span>
                 <span className="font-medium text-white/90 whitespace-nowrap">
-                  Halal Certified Kitchen
+                  100% Halal & Higienis
                 </span>
               </div>
             </div>
@@ -118,21 +116,21 @@ export const Navbar: React.FC<NavbarProps> = ({
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between">
-              {/* Logo */}
+              {/* Logo / Service Title */}
               <button
                 type="button"
                 onClick={() => handleNavClick('home')}
                 className="flex items-center gap-2.5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest rounded-lg whitespace-nowrap active:scale-[0.99] disabled:opacity-50 cursor-pointer"
               >
                 <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-forest flex items-center justify-center text-white shadow-xs">
-                  <Leaf className="w-4 h-4 sm:w-5 sm:h-5 text-fresh" />
+                  <UtensilsCrossed className="w-4 h-4 sm:w-5 sm:h-5 text-fresh" />
                 </div>
                 <div>
-                  <span className="font-display font-black text-lg sm:text-xl text-forest block leading-none">
-                    Nutri<span className="text-leaf">Box</span>
+                  <span className="font-display font-bold text-base sm:text-lg text-forest block leading-none">
+                    {config.brandName && !config.brandName.toLowerCase().includes('nutribox') ? config.brandName : 'Catering Acara'}
                   </span>
                   <span className="text-[10px] sm:text-[11px] font-semibold text-ink-2 block mt-0.5">
-                    Daily BSD City
+                    Spesialis Acara & Prasmanan
                   </span>
                 </div>
               </button>
@@ -172,7 +170,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   onClick={() => onOpenWhatsApp()}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-forest hover:bg-forest-hover active:scale-[0.99] disabled:opacity-50 text-white text-xs font-semibold shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf whitespace-nowrap cursor-pointer"
                 >
-                  <span>Pesan Sekarang</span>
+                  <span>Konsultasi Acara</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </button>
               </div>
@@ -241,13 +239,13 @@ export const Navbar: React.FC<NavbarProps> = ({
                 }}
                 className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-forest text-white font-semibold text-xs shadow-xs active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf cursor-pointer whitespace-nowrap"
               >
-                <span>Pesan via WhatsApp</span>
+                <span>Konsultasi via WhatsApp</span>
                 <ArrowUpRight className="w-4 h-4" />
               </button>
 
               <div className="text-center text-xs text-ink-2">
-                <p>BSD City, Serpong dan sekitarnya</p>
-                <p className="font-semibold text-forest mt-0.5">Pengiriman: 10.30 sampai 11.45 WIB</p>
+                <p>BSD City, Serpong & Seluruh Jabodetabek</p>
+                <p className="font-semibold text-forest mt-0.5">Pengiriman: Tiba H-1 Jam Sebelum Acara</p>
               </div>
             </div>
           </div>

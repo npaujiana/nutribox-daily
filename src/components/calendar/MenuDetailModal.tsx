@@ -1,6 +1,6 @@
 import React from 'react';
 import { CalendarMenuItem } from '../../types';
-import { X, Calendar, MessageSquare, ArrowUpRight } from 'lucide-react';
+import { X, Calendar, MessageSquare, ArrowUpRight, Users, CheckCircle2 } from 'lucide-react';
 
 interface MenuDetailModalProps {
   item: CalendarMenuItem | null;
@@ -16,13 +16,13 @@ export const MenuDetailModal: React.FC<MenuDetailModalProps> = ({
   if (!item) return null;
 
   const handleOrder = () => {
-    const msg = `Halo NutriBox Daily, saya ingin memesan menu untuk tanggal ${item.date} (${item.dayName}):
+    const msg = `Halo Nutribox Catering, saya ingin memesan menu acara untuk jadwal ${item.dayName} (${item.date}):
 
 Menu: ${item.name}
 Kategori: ${item.categoryLabel}
-Estimasi Kalori: ${item.calories} kcal
+Ketentuan: ${item.portionInfo || 'Porsi Standar'}
 
-Mohon informasi mengenai ketersediaan kuota pengiriman untuk area saya.
+Mohon informasi mengenai ketersediaan kuota pemesanan untuk tanggal tersebut.
 
 Terima kasih.`;
     onOpenWhatsApp(msg);
@@ -62,9 +62,9 @@ Terima kasih.`;
           <div className="p-6 space-y-5">
             <div className="flex items-center gap-2 text-xs text-ink-2 pb-3 border-b border-rule-subtle">
               <Calendar className="w-4 h-4 text-leaf" />
-              <span className="font-semibold text-forest">Jadwal rotasi: {item.dayName}, {item.date}</span>
-              <span>,</span>
-              <span>Pengiriman 10.30 sampai 11.45 WIB</span>
+              <span className="font-semibold text-forest">Rekomendasi: {item.dayName}, {item.date}</span>
+              <span>•</span>
+              <span>Garansi Tiba H-1 Jam Acara</span>
             </div>
 
             <h2 className="font-display font-bold text-xl sm:text-2xl text-forest">
@@ -75,27 +75,27 @@ Terima kasih.`;
               {item.description}
             </p>
 
-            {/* Nutrisi */}
+            {/* Event Specs Box */}
             <div className="p-4 rounded-lg bg-paper-2 border border-rule-subtle">
               <span className="text-xs font-semibold text-forest block mb-2">
-                Estimasi kandungan makronutrisi:
+                Spesifikasi & ketentuan paket:
               </span>
-              <div className="grid grid-cols-4 gap-2 text-center tabular-nums">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
                 <div className="p-2 rounded-lg bg-paper border border-rule-subtle">
-                  <span className="text-xs text-ink-2 block">Energi</span>
-                  <span className="font-display font-bold text-sm text-forest">{item.calories} kcal</span>
+                  <span className="text-xs text-ink-2 block">Kategori</span>
+                  <span className="font-display font-bold text-xs text-forest">{item.categoryLabel}</span>
                 </div>
                 <div className="p-2 rounded-lg bg-paper border border-rule-subtle">
-                  <span className="text-xs text-ink-2 block">Protein</span>
-                  <span className="font-display font-bold text-sm text-forest">{item.protein} g</span>
+                  <span className="text-xs text-ink-2 block">Porsi</span>
+                  <span className="font-display font-bold text-xs text-forest">Kenyang Dewasa</span>
                 </div>
                 <div className="p-2 rounded-lg bg-paper border border-rule-subtle">
-                  <span className="text-xs text-ink-2 block">Karbo</span>
-                  <span className="font-display font-bold text-sm text-forest">{item.carbohydrates} g</span>
+                  <span className="text-xs text-ink-2 block">Ketentuan</span>
+                  <span className="font-display font-bold text-xs text-forest">{item.portionInfo?.split('•')[1]?.trim() || 'Min. 15 Pax'}</span>
                 </div>
                 <div className="p-2 rounded-lg bg-paper border border-rule-subtle">
-                  <span className="text-xs text-ink-2 block">Lemak</span>
-                  <span className="font-display font-bold text-sm text-forest">{item.fat} g</span>
+                  <span className="text-xs text-ink-2 block">Sertifikasi</span>
+                  <span className="font-display font-bold text-xs text-forest">100% Halal</span>
                 </div>
               </div>
             </div>
@@ -103,7 +103,7 @@ Terima kasih.`;
             {/* Komposisi */}
             <div>
               <span className="text-xs font-semibold text-forest block mb-2">
-                Komposisi porsi terstandar:
+                Komposisi & isian menu lengkap:
               </span>
               <div className="flex flex-wrap gap-1.5">
                 {item.composition.map((c, i) => (
@@ -116,7 +116,7 @@ Terima kasih.`;
 
             <div className="text-xs text-ink-2 bg-paper-2 p-3 rounded-lg border border-rule-subtle">
               <p>
-                Data di atas merupakan contoh menu representatif untuk mengilustrasikan transparansi nutrisi harian NutriBox Daily.
+                *Pesanan dapat dikustomisasi sesuai preferensi tamu (misal: tingkat kepedasan sambal, opsi sayuran, atau request menu vegetarian).
               </p>
             </div>
 
@@ -124,10 +124,10 @@ Terima kasih.`;
               <button
                 type="button"
                 onClick={handleOrder}
-                className="w-full py-3 px-4 rounded-lg bg-forest hover:bg-forest-hover active:scale-[0.99] disabled:opacity-50 text-white font-semibold text-xs sm:text-sm shadow-xs transition-colors flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer whitespace-nowrap"
+                className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-lg bg-forest hover:bg-forest-hover text-white font-semibold text-xs sm:text-sm shadow-xs active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>Pesan menu ini via WhatsApp</span>
+                <span>Pesan menu ini untuk tanggal acara saya</span>
                 <ArrowUpRight className="w-4 h-4" />
               </button>
             </div>

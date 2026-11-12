@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Leaf, Clock, MapPin, Settings, ArrowUpRight } from 'lucide-react';
+import { UtensilsCrossed, Clock, MapPin, Settings, ArrowUpRight } from 'lucide-react';
 import { BusinessConfig } from '../../types';
 
 interface FooterProps {
@@ -24,17 +24,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConfig, config
           <div className="space-y-4 text-left">
             <div className="flex items-center gap-2.5">
               <div className="w-9 h-9 rounded-lg bg-leaf flex items-center justify-center text-forest shadow-xs">
-                <Leaf className="w-5 h-5" />
+                <UtensilsCrossed className="w-5 h-5" />
               </div>
-              <span className="font-display font-black text-2xl text-white">
-                Nutri<span className="text-leaf">Box</span> <span className="text-sm font-normal text-sage">Daily</span>
+              <span className="font-display font-bold text-xl text-white">
+                {config.brandName || 'Nutribox Catering'}
               </span>
             </div>
             <p className="text-xs text-sage leading-relaxed">
-              Healthy meals made practical for your everyday routine. Katering makan siang sehat dengan rotasi menu berganti setiap minggu, estimasi nutrisi terukur, dan pengiriman tepat waktu di area BSD City dan Tangerang Selatan.
+              Spesialis layanan katering acara, prasmanan, nasi kotak bento, tumpeng syukuran, dan snack box rapat untuk area BSD City, Tangerang Selatan, hingga seluruh Jabodetabek.
             </p>
             <div className="text-xs text-sage">
-              <span>Beroperasi secara komersial sejak 2025</span>
+              <span>Berpengalaman melayani ratusan acara sejak 2023</span>
             </div>
           </div>
 
@@ -46,27 +46,27 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConfig, config
             <ul className="space-y-2 text-xs text-sage">
               <li>
                 <button type="button" onClick={() => handleNav('catalog')} className="hover:text-white active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf rounded-md whitespace-nowrap cursor-pointer">
-                  Katalog meal box
+                  Katalog menu acara
                 </button>
               </li>
               <li>
                 <button type="button" onClick={() => handleNav('calendar')} className="hover:text-white active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf rounded-md whitespace-nowrap cursor-pointer">
-                  Kalender menu mingguan
+                  Jadwal menu & ketersediaan
                 </button>
               </li>
               <li>
                 <button type="button" onClick={() => handleNav('subscription')} className="hover:text-white active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf rounded-md whitespace-nowrap cursor-pointer">
-                  Paket langganan katering
+                  Paket katering acara
                 </button>
               </li>
               <li>
                 <button type="button" onClick={() => handleNav('calculator')} className="hover:text-white active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf rounded-md whitespace-nowrap cursor-pointer">
-                  Kalkulator kalori
+                  Kalkulator budget acara
                 </button>
               </li>
               <li>
                 <button type="button" onClick={() => handleNav('about')} className="hover:text-white active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf rounded-md whitespace-nowrap cursor-pointer">
-                  Tentang NutriBox Daily
+                  Tentang Kami
                 </button>
               </li>
               <li>
@@ -86,16 +86,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConfig, config
               <div className="flex items-start gap-2">
                 <Clock className="w-4 h-4 text-leaf shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-white font-medium">Pengiriman reguler:</p>
-                  <p>Senin sampai Jumat: 10.30 sampai 11.45 WIB</p>
-                  <p className="text-xs text-sage">Sabtu, Minggu dan libur nasional: tutup</p>
+                  <p className="text-white font-medium">Pengiriman acara:</p>
+                  <p>Setiap Hari: Tiba H-1 Jam Sebelum Acara</p>
+                  <p className="text-xs text-sage">Buka Sabtu, Minggu & Hari Libur Nasional</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-leaf shrink-0 mt-0.5" />
                 <div>
                   <p className="text-white font-medium">Cakupan wilayah:</p>
-                  <p>BSD City, Serpong, Gading Serpong, Alam Sutera, Bintaro, Ciputat, Pamulang.</p>
+                  <p>BSD City, Serpong, Gading Serpong, Alam Sutera, Bintaro, Tangerang, Jakarta & sekitarnya.</p>
                 </div>
               </div>
             </div>
@@ -107,10 +107,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConfig, config
               Dapur produksi
             </h3>
             <div className="space-y-2.5 text-xs text-sage">
-              <p className="text-white font-semibold">NutriBox Daily Production Kitchen</p>
+              <p className="text-white font-semibold">Central Production Kitchen</p>
               <p>BSD City, Serpong, Tangerang Selatan, Banten, Indonesia.</p>
               <p className="text-xs text-sage">
-                Fasilitas dapur produksi tertutup untuk meal preparation dan pengiriman katering.
+                Fasilitas dapur produksi skala besar untuk katering acara, prasmanan, dan nasi kotak higienis.
               </p>
               <div className="pt-2">
                 <a
@@ -139,7 +139,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConfig, config
 
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-sage">
-          <p>© {new Date().getFullYear()} NutriBox Daily. Hak cipta dilindungi undang-undang.</p>
+          <p>© {new Date().getFullYear()} {config.brandName || 'Nutribox Catering'}. Hak cipta dilindungi undang-undang.</p>
           <div className="flex items-center gap-6">
             <button
               onClick={() => setLegalModal('privacy')}
@@ -151,7 +151,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConfig, config
               onClick={() => setLegalModal('terms')}
               className="hover:text-accent-ink transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fresh rounded-sm"
             >
-              Ketentuan layanan
+              Ketentuan layanan acara
             </button>
             <button
               onClick={() => handleNav('contact')}
@@ -168,27 +168,27 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConfig, config
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-forest/80">
           <div className="bg-paper text-ink max-w-lg w-full rounded-card p-6 shadow-xl relative max-h-[80vh] overflow-y-auto text-xs leading-relaxed">
             <h3 className="text-base font-bold text-forest font-display mb-3">
-              {legalModal === 'privacy' ? 'Kebijakan privasi' : 'Ketentuan layanan NutriBox Daily'}
+              {legalModal === 'privacy' ? 'Kebijakan privasi' : 'Ketentuan layanan katering acara'}
             </h3>
             {legalModal === 'privacy' ? (
               <div className="space-y-2.5 text-ink-2">
                 <p>
-                  NutriBox Daily menghormati privasi setiap pelanggan. Data berat badan, tinggi badan, dan usia yang Anda masukkan di kalkulator kalori diproses secara eksklusif pada browser perangkat Anda (client-side) dan tidak dikirim ke server penyimpanan kami.
+                  Kami menghormati privasi setiap pelanggan. Data jumlah tamu dan parameter yang Anda masukkan di kalkulator acara diproses secara lokal di browser perangkat Anda tanpa penyimpanan data rahasia di server luar.
                 </p>
                 <p>
-                  Data kontak (nama, nomor telepon, alamat pengiriman) hanya digunakan oleh tim customer service kami untuk keperluan pemrosesan pesanan katering dan koordinasi pengantaran kurir harian.
+                  Data kontak (nama, nomor telepon, alamat venue acara) hanya digunakan untuk keperluan komunikasi pemesanan, pengiriman invoice resmi, dan koordinasi staf pengantaran katering.
                 </p>
               </div>
             ) : (
               <div className="space-y-2.5 text-ink-2">
                 <p>
-                  1. Pre-order ditutup H-1 pukul 17.00 WIB. Pesanan baru resmi diproses setelah pembayaran terverifikasi.
+                  1. Pemesanan Nasi Kotak & Snack Box ditutup H-1 pukul 17.00 WIB. Pemesanan Prasmanan & Tumpeng disarankan booking H-3 sampai H-7 sebelum acara.
                 </p>
                 <p>
-                  2. Nilai nutrisi kalori, protein, karbohidrat, dan lemak yang tercantum pada menu merupakan estimasi berdasarkan resep standar dan dapat mengalami variasi alami.
+                  2. Slot tanggal acara dan jadwal produksi resmi terkunci setelah verifikasi DP 50% diterima. Pelunasan dilakukan H-1 sebelum tanggal pengantaran.
                 </p>
                 <p>
-                  3. Dapur produksi belum bersertifikat bebas alergen total. Pelanggan wajib menginformasikan alergi bahan pangan saat konfirmasi pemesanan.
+                  3. Seluruh bahan makanan dijamin 100% Halal dan diolah secara higienis di Central Production Kitchen BSD City.
                 </p>
               </div>
             )}

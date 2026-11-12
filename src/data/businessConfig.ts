@@ -1,63 +1,63 @@
 import { BusinessConfig } from '../types';
 
 export const initialBusinessConfig: BusinessConfig = {
-  brandName: 'NutriBox Daily',
-  legalEntityNote: 'Katering Makanan Sehat B2C — Beroperasi sejak 2025 di Tangerang Selatan',
-  tagline: 'Modern Nutrition, Made for Everyday Life',
-  subTagline: 'Makan Sehat, Tetap Praktis Setiap Hari',
+  brandName: 'Catering Acara',
+  legalEntityNote: 'Layanan Katering Acara, Prasmanan, Nasi Kotak & Syukuran — Beroperasi di BSD City & Jabodetabek',
+  tagline: 'Sajian Lezat & Berkesan untuk Berbagai Acara Istimewa',
+  subTagline: 'Spesialis Prasmanan, Nasi Kotak, Tumpeng & Snack Box Terpercaya',
   location: {
-    name: 'NutriBox Daily Production Kitchen',
+    name: 'Central Production Kitchen',
     subdistrict: 'Serpong',
     city: 'BSD City, Tangerang Selatan',
     province: 'Banten',
     country: 'Indonesia',
     mapsQueryUrl: 'https://www.google.com/maps/search/?api=1&query=BSD+City%2C+Serpong%2C+Tangerang+Selatan',
-    isVerifiedKitchenAddress: false, // Dapur produksi tertutup, bukan restoran/titik publik bebas
-    note: 'Fasilitas dapur produksi khusus katering meal-prep dan pengiriman. Bukan restoran atau tempat makan dine-in umum.'
+    isVerifiedKitchenAddress: false,
+    note: 'Fasilitas dapur pusat produksi katering acara berskala besar dengan standar higienis tinggi. Melayani pengantaran ke seluruh area Jabodetabek.'
   },
   operationalHours: {
-    production: 'Senin – Jumat: 06.00 – 10.00 WIB',
-    deliveryWindow: 'Senin – Jumat: 10.30 – 11.45 WIB (Tiba sebelum makan siang)',
-    csWeekdays: 'Senin – Jumat: 08.00 – 17.00 WIB',
-    csSaturday: 'Sabtu: 09.00 – 14.00 WIB (Hanya Customer Service)',
-    sundayHolidays: 'Minggu & Hari Libur Nasional: Tutup (Tidak ada produksi)',
-    preorderCutoff: 'Pre-order H-1 ditutup pukul 17.00 WIB setiap harinya'
+    production: 'Setiap Hari: 04.00 – 19.00 WIB (Menyesuaikan Jadwal Acara)',
+    deliveryWindow: 'Tiba H-1 Jam sebelum acara dimulai (Garansi Tepat Waktu)',
+    csWeekdays: 'Senin – Minggu: 08.00 – 21.00 WIB',
+    csSaturday: 'Sabtu – Minggu: 08.00 – 21.00 WIB',
+    sundayHolidays: 'Tetap Melayani Pengiriman di Hari Minggu & Hari Libur Nasional',
+    preorderCutoff: 'Pemesanan Nasi Kotak min. H-1, Prasmanan & Tumpeng min. H-3'
   },
   whatsapp: {
-    number: '', // Kosong secara default sesuai spesifikasi; dapat diisi di panel konfigurasi
-    verified: false, // Belum terverifikasi secara resmi oleh pemilik bisnis
-    displayPlaceholder: '+62 812-7788-9911 (Direct WhatsApp Hotline)'
+    number: '',
+    verified: false,
+    displayPlaceholder: '+62 812-8899-7700 (Hotline Pemesanan Acara)'
   },
   email: {
-    address: 'contact@nutriboxdaily.com',
+    address: 'order@nutriboxcatering.com',
     verified: false
   },
   social: {
     instagram: {
-      handle: '@nutriboxdaily',
-      url: 'https://instagram.com/nutriboxdaily',
+      handle: '@nutriboxcatering',
+      url: 'https://instagram.com/nutriboxcatering',
       verified: false
     },
     tiktok: {
-      handle: '@nutriboxdaily',
-      url: 'https://tiktok.com/@nutriboxdaily',
+      handle: '@nutriboxcatering',
+      url: 'https://tiktok.com/@nutriboxcatering',
       verified: false
     },
     facebook: {
-      handle: 'NutriBox Daily',
-      url: 'https://facebook.com/nutriboxdaily',
+      handle: 'Nutribox Catering Acara',
+      url: 'https://facebook.com/nutriboxcatering',
       verified: false
     }
   },
   founder: {
     name: 'Nadia Putri Maheswari',
-    role: 'Founder & Business Manager',
-    bio: 'Mengembangkan NutriBox Daily dengan misi menghadirkan makanan bernutrisi terukur, variatif, dan praktis bagi profesional urban.',
-    isVerifiedPublic: false // Belum dikonfirmasi untuk publikasi publik sebagai fakta hukum
+    role: 'Managing Director & Culinary Operations',
+    bio: 'Berpengalaman memimpin operasional katering acara keluarga, gathering korporasi, hingga pesta pernikahan dengan standar kelezatan dan ketepatan waktu tinggi.',
+    isVerifiedPublic: false
   }
 };
 
-const STORAGE_KEY = 'nutribox_business_config';
+const STORAGE_KEY = 'catering_business_config';
 
 export function getStoredBusinessConfig(): BusinessConfig {
   if (typeof window === 'undefined') return initialBusinessConfig;

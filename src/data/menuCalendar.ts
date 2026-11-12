@@ -1,96 +1,101 @@
 import { CalendarMenuItem } from '../types';
 
-// Data rotasi menu mingguan contoh (Representatif sample menu yang transparan bertanda isExample: true)
+// Data rotasi rekomendasi menu acara mingguan
 export const sampleCalendarMenus: CalendarMenuItem[] = [
   {
     id: 'menu-ex-001',
     date: '2026-11-09', // Senin
     dayName: 'Senin',
-    name: 'Grilled Chicken Brown Rice Bowl',
-    description: 'Dada ayam panggang rempah dengan nasi merah pulen, brokoli kukus, dan saus lada hitam gurih.',
+    name: 'Nasi Kotak Ayam Bakar Madu Spesial',
+    description: 'Pilihan terfavorit rapat awal pekan kantor. Ayam bakar bumbu madu karamelisasi, tahu tempe bacem, lalapan segar, sambal bajak & kerupuk udang.',
     image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80',
-    category: 'balance',
-    categoryLabel: 'Daily Balance',
-    calories: 485,
-    protein: 38,
-    carbohydrates: 52,
-    fat: 13,
+    category: 'box',
+    categoryLabel: 'Nasi Kotak & Bento',
+    calories: 650,
+    protein: 36,
+    carbohydrates: 78,
+    fat: 20,
+    portionInfo: 'Porsi Kenyang Dewasa • Min. 15 Box',
     isPublished: true,
     isExample: true,
-    composition: ['Nasi merah pulen', 'Dada ayam panggang fillet', 'Brokoli kukus', 'Wortel iris rebus', 'Saus lada hitam no MSG']
+    composition: ['Nasi putih wangi pulen pandan', 'Ayam bakar madu legit', 'Tahu & tempe bacem gurih', 'Lalapan segar timun kemangi', 'Sambal terasi bajak matang', 'Kerupuk udang renyah']
   },
   {
     id: 'menu-ex-002',
     date: '2026-11-10', // Selasa
     dayName: 'Selasa',
-    name: 'Lemon Herb Fish with Cauliflower Rice',
-    description: 'Fillet ikan dori panggang saus lemon rosemary segar, disajikan dengan kembang kol parut gurih rendah kalori.',
-    image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80',
-    category: 'lean',
-    categoryLabel: 'Weight Management',
-    calories: 390,
+    name: 'Nasi Liwet Solo Komplit Daun Pisang',
+    description: 'Aroma wangi rempah tradisional dengan ayam goreng lengkuas gurih, telur pindang cokelat legit, dan urap sayur kelapa sangrai harum.',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+    category: 'box',
+    categoryLabel: 'Nasi Kotak & Bento',
+    calories: 680,
     protein: 34,
-    carbohydrates: 28,
-    fat: 9,
+    carbohydrates: 82,
+    fat: 22,
+    portionInfo: 'Porsi Kenyang Dewasa • Min. 15 Box',
     isPublished: true,
     isExample: true,
-    composition: ['Kembang kol parut panggang', 'Fillet dori panggang rosemary', 'Buncis muda baby', 'Tomat panggang herbal', 'Perasan lemon segar']
+    composition: ['Nasi liwet serai kasturi teri', 'Ayam goreng rempah lengkuas', 'Telur pindang wangi', 'Urap sayur kelapa sangrai', 'Sambal bawang matang']
   },
   {
     id: 'menu-ex-003',
     date: '2026-11-11', // Rabu
     dayName: 'Rabu',
-    name: 'Double Protein Beef & Egg Quinoa Box',
-    description: 'Daging sapi sirloin iris tanpa lemak dengan telur omega rebus, quinoa hangat, dan edamame segar.',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80',
-    category: 'protein',
-    categoryLabel: 'High Protein',
-    calories: 610,
-    protein: 44,
-    carbohydrates: 48,
-    fat: 16,
+    name: 'Paket Prasmanan Nusantara Gold (Buffet)',
+    description: 'Layanan prasmanan lengkap untuk acara gathering & seminar. Termasuk rendang sapi empuk, ayam suwir rica kemangi, sup kimlo, buah potong, dan es kopyor.',
+    image: 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80',
+    category: 'buffet',
+    categoryLabel: 'Prasmanan / Buffet',
+    calories: 760,
+    protein: 45,
+    carbohydrates: 88,
+    fat: 25,
+    portionInfo: 'Lengkap Meja Buffet & Pemanas • Min. 50 Pax',
     isPublished: true,
     isExample: true,
-    composition: ['Quinoa merah & putih kukus', 'Beef sirloin lean cut saus tiram alami', 'Telur omega rebus', 'Edamame jepang rebus', 'Bayam jepang horenzo']
+    composition: ['Nasi putih pulen & nasi goreng', 'Rendang daging sapi padang empuk', 'Ayam suwir kemangi gurih', 'Sup kimlo bakso jamur sedap', 'Capcay seafood sayur segar', 'Buah potong & es kopyor segar']
   },
   {
     id: 'menu-ex-004',
     date: '2026-11-12', // Kamis
     dayName: 'Kamis',
-    name: 'Ayam Bakar Madu Mustard & Sweet Potato',
-    description: 'Dada ayam bakar bumbu madu mustard alami dengan ubi madu panggang kaya antioksidan dan tumis buncis.',
-    image: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80',
-    category: 'active',
-    categoryLabel: 'Active Meal',
-    calories: 640,
-    protein: 38,
-    carbohydrates: 72,
-    fat: 15,
+    name: 'Snack Box Rapat & Coffee Break Premium',
+    description: 'Kombinasi 3 kue pilihan premium (risoles ragout ayam creamy, pastel sayur telur, dan fudge brownies almond) lengkap air mineral cup.',
+    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80',
+    category: 'snack',
+    categoryLabel: 'Snack Box & Kudapan',
+    calories: 390,
+    protein: 12,
+    carbohydrates: 54,
+    fat: 14,
+    portionInfo: 'Kombinasi 3 Kue + Air Mineral • Min. 20 Box',
     isPublished: true,
     isExample: true,
-    composition: ['Ubi madu panggang kubus', 'Dada ayam bakar madu mustard', 'Tumis buncis jagung muda', 'Sambal matah minyak kelapa', 'Biji labu panggang']
+    composition: ['Risoles ragout ayam creamy', 'Pastel sayur telur renyah', 'Fudge brownies almond legit', 'Air mineral cup 220ml', 'Tisu higienis']
   },
   {
     id: 'menu-ex-005',
     date: '2026-11-13', // Jumat
     dayName: 'Jumat',
-    name: 'Teriyaki Chicken Salad & Soba Bowl',
-    description: 'Mie soba gandum dingin dengan ayam teriyaki homemade rendah sodium dan ragam salad renyah.',
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
-    category: 'balance',
-    categoryLabel: 'Daily Balance',
-    calories: 510,
-    protein: 36,
-    carbohydrates: 58,
-    fat: 11,
+    name: 'Tumpeng Kuning Komplit Syukuran',
+    description: 'Tumpeng kuning bertingkat hiasan ukiran sayur artistik. Pilihan tepat untuk tasyakuran kantor, peluncuran produk baru, atau ulang tahun.',
+    image: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80',
+    category: 'tumpeng',
+    categoryLabel: 'Tumpeng & Hantaran',
+    calories: 720,
+    protein: 38,
+    carbohydrates: 90,
+    fat: 24,
+    portionInfo: 'Tampah Bambu Daun Pisang • Porsi 20–25 Orang',
     isPublished: true,
     isExample: true,
-    composition: ['Mie soba soba gandum utuh', 'Dada ayam teriyaki light soy', 'Kol ungu & selada romaine', 'Edamame kupas', 'Dressing wijen sangrai']
+    composition: ['Tumpeng nasi kuning pulen kunyit', 'Ayam lengkuas rempah gurih', 'Telur balado merah pedas manis', 'Perkedel kentang daging sapi', 'Orek tempe kering kacang', 'Mie goreng jawa spesial']
   }
 ];
 
 export const emptyStateInfo = {
-  title: 'Menu untuk periode ini belum tersedia',
-  supportingText: 'Menu katering NutriBox Daily diumumkan secara bertahap setiap Jumat pukul 17.00 WIB untuk periode minggu berikutnya. Hubungi tim kami untuk jadwal rilis terbaru.',
-  ctaText: 'Tanya Menu via WhatsApp'
+  title: 'Jadwal pemesanan tanggal ini tersedia',
+  supportingText: 'Kami menerima pesanan katering acara setiap hari. Untuk ketersediaan slot tanggal acara dan konsultasi custom menu, silakan hubungi tim kami via WhatsApp.',
+  ctaText: 'Konsultasi Tanggal Acara via WhatsApp'
 };

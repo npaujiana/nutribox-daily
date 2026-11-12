@@ -4,23 +4,23 @@ export const BrandValueStrip: React.FC = () => {
   const values = [
     {
       index: '01',
-      title: 'Weekly Menu Rotation',
-      description: 'Menu berganti setiap minggu agar rutinitas makan siangmu selalu segar dan variatif.',
+      title: 'Cita Rasa Otentik & Lezat',
+      description: 'Racikan bumbu rempah pilihan yang kaya rasa, gurih mantap, dan disukai seluruh kalangan tamu undangan.',
     },
     {
       index: '02',
-      title: 'Transparent Nutrition',
-      description: 'Estimasi kalori, protein, karbohidrat, dan lemak transparan di setiap porsi box.',
+      title: 'Garansi Tepat Waktu H-1 Jam',
+      description: 'Pesanan diantar dan tiba 60 menit sebelum jadwal acara dimulai, memberi ketenangan pikiran bagi tuan rumah.',
     },
     {
       index: '03',
-      title: 'No Added MSG',
-      description: 'Rasa gurih lezat murni berasal dari kaldu alami, rempah segar, dan teknik memasak terukur.',
+      title: '100% Halal & Dapur Higienis',
+      description: 'Standar kebersihan ketat dengan kemasan food-grade anti-tumpah, rapi, dan menjaga makanan tetap hangat.',
     },
     {
       index: '04',
-      title: 'On-Time Lunch Delivery',
-      description: 'Pengiriman terjadwal tiba pukul 10.30 sampai 11.45 WIB, siap tepat sebelum jam istirahat kantor.',
+      title: 'Layanan Acara Terpadu',
+      description: 'Mulai dari Nasi Kotak, Snack Box, Prasmanan lengkap meja pemanas & staf pramusaji, hingga Tumpeng Syukuran.',
     },
   ];
 

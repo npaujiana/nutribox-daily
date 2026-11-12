@@ -1,6 +1,6 @@
 import React from 'react';
 import { Product } from '../../types';
-import { X, Flame, MessageSquare, ArrowUpRight, Check } from 'lucide-react';
+import { X, MessageSquare, ArrowUpRight, Check, Users } from 'lucide-react';
 
 interface ProductDetailModalProps {
   product: Product | null;
@@ -16,14 +16,14 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
   if (!product) return null;
 
   const handleOrder = () => {
-    const msg = `Halo NutriBox Daily, saya ingin memesan produk katering berikut:
+    const msg = `Halo Nutribox Catering, saya ingin memesan menu acara berikut:
 
-Produk: ${product.name}
+Menu: ${product.name}
 Kategori: ${product.categoryLabel}
 Harga: ${product.formattedPrice}
-Estimasi Kalori: ${product.caloriesRange}
+Ketentuan: ${product.portionInfo || 'Porsi Standar'}
 
-Mohon informasi mengenai ketersediaan jadwal pengiriman untuk area saya.
+Mohon informasi mengenai ketersediaan untuk tanggal acara saya dan rincian pemesanan.
 
 Terima kasih.`;
     onOpenWhatsApp(msg);
@@ -71,69 +71,63 @@ Terima kasih.`;
                   {product.name}
                 </h2>
                 <p className="text-xs text-ink-2 mt-1">
-                  {product.tagline} • Dimasak segar harian tanpa tambahan MSG
+                  {product.tagline} • Dimasak segar di hari H acara
                 </p>
               </div>
               <div className="text-left sm:text-right">
-                <span className="text-xs text-ink-2 block">Harga satuan</span>
+                <span className="text-xs text-ink-2 block">Estimasi harga</span>
                 <span className="font-display font-bold text-2xl text-forest tabular-nums">
                   {product.formattedPrice}
                 </span>
-                <span className="text-xs text-ink-2 block">belum termasuk ongkir</span>
+                <span className="text-xs text-ink-2 block">{product.portionInfo || 'Porsi Standar'}</span>
               </div>
             </div>
 
             {/* Description */}
             <div>
               <h3 className="font-display font-bold text-sm text-forest mb-1.5">
-                Tentang menu ini
+                Deskripsi menu
               </h3>
               <p className="text-xs sm:text-sm text-ink-2 leading-relaxed">
                 {product.description}
               </p>
             </div>
 
-            {/* Nutrition Estimates Box */}
+            {/* Event Specs Box */}
             <div className="p-4 rounded-lg bg-paper-2 border border-rule-subtle">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="font-display font-bold text-sm text-forest flex items-center gap-1.5">
-                  <Flame className="w-4 h-4 text-terracotta" />
-                  <span>Informasi nutrisi terukur</span>
+                  <Users className="w-4 h-4 text-leaf" />
+                  <span>Spesifikasi & ketentuan paket</span>
                 </h3>
-                <span className="text-xs text-ink-2 font-medium">Estimasi per box</span>
+                <span className="text-xs text-ink-2 font-medium">Standar Layanan Acara</span>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 tabular-nums">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                 <div className="p-2.5 rounded-lg bg-paper border border-rule-subtle text-center">
-                  <span className="text-xs text-ink-2 block">Kalori</span>
-                  <span className="font-display font-bold text-sm text-forest">
-                    {product.caloriesRange}
+                  <span className="text-xs text-ink-2 block">Ketentuan</span>
+                  <span className="font-display font-bold text-xs text-forest">
+                    {product.portionInfo || 'Min. 15 Pax'}
                   </span>
                 </div>
-                {product.proteinEstimate && (
-                  <div className="p-2.5 rounded-lg bg-paper border border-rule-subtle text-center">
-                    <span className="text-xs text-ink-2 block">Protein</span>
-                    <span className="font-display font-bold text-sm text-forest">
-                      {product.proteinEstimate}
-                    </span>
-                  </div>
-                )}
-                {product.carbsEstimate && (
-                  <div className="p-2.5 rounded-lg bg-paper border border-rule-subtle text-center">
-                    <span className="text-xs text-ink-2 block">Karbohidrat</span>
-                    <span className="font-display font-bold text-sm text-forest">
-                      {product.carbsEstimate}
-                    </span>
-                  </div>
-                )}
-                {product.fatEstimate && (
-                  <div className="p-2.5 rounded-lg bg-paper border border-rule-subtle text-center">
-                    <span className="text-xs text-ink-2 block">Lemak</span>
-                    <span className="font-display font-bold text-sm text-forest">
-                      {product.fatEstimate}
-                    </span>
-                  </div>
-                )}
+                <div className="p-2.5 rounded-lg bg-paper border border-rule-subtle text-center">
+                  <span className="text-xs text-ink-2 block">Porsi</span>
+                  <span className="font-display font-bold text-xs text-forest">
+                    Kenyang Dewasa
+                  </span>
+                </div>
+                <div className="p-2.5 rounded-lg bg-paper border border-rule-subtle text-center">
+                  <span className="text-xs text-ink-2 block">Sertifikasi</span>
+                  <span className="font-display font-bold text-xs text-forest">
+                    100% Halal
+                  </span>
+                </div>
+                <div className="p-2.5 rounded-lg bg-paper border border-rule-subtle text-center">
+                  <span className="text-xs text-ink-2 block">Pengantaran</span>
+                  <span className="font-display font-bold text-xs text-forest">
+                    H-1 Jam Acara
+                  </span>
+                </div>
               </div>
 
               <div className="mt-3 text-xs text-ink-2">
@@ -145,7 +139,7 @@ Terima kasih.`;
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <h3 className="font-display font-bold text-xs text-forest mb-2">
-                  Komponen utama:
+                  Komposisi & isian menu:
                 </h3>
                 <ul className="space-y-1.5 text-xs text-ink-2">
                   {product.ingredients.map((ing, i) => (
@@ -159,7 +153,7 @@ Terima kasih.`;
 
               <div>
                 <h3 className="font-display font-bold text-xs text-forest mb-2">
-                  Keunggulan menu:
+                  Fasilitas & kelengkapan:
                 </h3>
                 <ul className="space-y-1.5 text-xs text-ink-2">
                   {product.features.map((feat, i) => (
@@ -175,7 +169,7 @@ Terima kasih.`;
             {/* Order Call to Action */}
             <div className="pt-4 border-t border-rule-subtle flex flex-col sm:flex-row items-center justify-between gap-3">
               <p className="text-xs text-ink-2 text-center sm:text-left">
-                Tersedia juga dalam paket langganan mingguan dan bulanan.
+                Tersedia diskon harga volume untuk pesanan di atas 100 pax.
               </p>
               <button
                 type="button"

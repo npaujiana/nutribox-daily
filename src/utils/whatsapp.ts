@@ -7,10 +7,12 @@ export interface WhatsAppMessagePayload {
   planName?: string;
   duration?: string;
   category?: string;
+  paxCount?: number;
+  eventType?: string;
+  serviceType?: string;
   preferences?: string;
   addons?: string;
-  calculatorGoal?: string;
-  calculatedCalories?: number;
+  calculatedBudget?: string;
   selectedDate?: string;
   customMessage?: string;
 }
@@ -21,54 +23,56 @@ export function formatWhatsAppMessage(payload: WhatsAppMessagePayload): string {
   }
 
   if (payload.type === 'plan') {
-    return `Halo NutriBox Daily, saya ingin memesan paket berikut:
+    return `Halo Nutribox Catering, saya ingin memesan paket acara berikut:
 
-Nama Paket: ${payload.planName || 'Paket Katering'}
-Durasi: ${payload.duration || 'Weekly Fit Plan (5 Hari)'}
-Kategori: ${payload.category || 'Daily Balance'}
-Preferensi: ${payload.preferences || 'Standar (Sesuai Menu Hari Ini)'}
-Tambahan: ${payload.addons || 'Tidak ada'}
+Paket: ${payload.planName || 'Paket Katering Acara'}
+Skala / Kategori: ${payload.duration || 'Acara Kantor & Komunitas (30–75 Pax)'}
+Jumlah Tamu: ${payload.paxCount ? `${payload.paxCount} Pax / Box` : '50 Pax'}
+Preferensi Menu: ${payload.preferences || 'Menu Standar Populer'}
+Tambahan / Add-ons: ${payload.addons || 'Tidak ada'}
 
-Mohon informasi mengenai ketersediaan menu, jadwal pengiriman, dan total pembayaran.
+Mohon informasi ketersediaan slot tanggal acara, rincian menu, dan prosedur booking.
 
 Terima kasih.`;
   }
 
   if (payload.type === 'product') {
-    return `Halo NutriBox Daily, saya tertarik dengan produk berikut:
+    return `Halo Nutribox Catering, saya tertarik dengan menu acara berikut:
 
-Produk: ${payload.productName || 'Daily Balance Box'}
-Harga: ${payload.price || 'Rp49.000'}
+Menu: ${payload.productName || 'Nasi Kotak Ayam Bakar Madu Spesial'}
+Harga: ${payload.price || 'Rp35.000'}
 
-Mohon informasi ketersediaan menu dan jadwal pengiriman.
+Mohon informasi mengenai minimal pemesanan, ketersediaan untuk tanggal acara saya, dan biaya pengantaran.
 
 Terima kasih.`;
   }
 
   if (payload.type === 'calculator') {
-    return `Halo NutriBox Daily, saya ingin berkonsultasi mengenai pilihan meal box berdasarkan hasil kalkulator kalori:
+    return `Halo Nutribox Catering, saya ingin berkonsultasi mengenai pesanan acara berdasarkan hasil kalkulator estimasi:
 
-Estimasi Kebutuhan Kalori: ${payload.calculatedCalories ? `${payload.calculatedCalories} kcal/hari` : 'Belum dihitung'}
-Target Pola Makan: ${payload.calculatorGoal || 'Menjaga Berat Badan'}
-Kategori yang ingin saya ketahui: ${payload.category || 'Daily Balance Box'}
+Jenis Acara: ${payload.eventType || 'Syukuran / Rapat Kantor'}
+Format Sajian: ${payload.serviceType || 'Nasi Kotak / Prasmanan'}
+Jumlah Tamu (Pax): ${payload.paxCount ? `${payload.paxCount} Pax` : '50 Pax'}
+Pilihan Menu / Paket: ${payload.category || 'Paket Favorit'}
+Estimasi Total Anggaran: ${payload.calculatedBudget || '-'}
 
-Mohon informasi paket dan rekomendasi menu yang sesuai untuk saya.
+Mohon informasi ketersediaan tanggal dan saran menu terbaik untuk acara kami.
 
 Terima kasih.`;
   }
 
   if (payload.type === 'calendar') {
-    return `Halo NutriBox Daily, saya ingin menanyakan ketersediaan menu untuk tanggal:
+    return `Halo Nutribox Catering, saya ingin menanyakan ketersediaan slot katering untuk tanggal:
 
-Tanggal: ${payload.selectedDate || 'Minggu ini'}
-Menu: ${payload.productName || 'Rotasi Menu Harian'}
+Tanggal Acara: ${payload.selectedDate || 'Bulan ini'}
+Menu Pilihan: ${payload.productName || 'Menu Rekomendasi Acara'}
 
-Apakah kuota pengiriman untuk tanggal tersebut masih tersedia?
+Apakah kuota pemesanan dan pengantaran untuk tanggal tersebut masih tersedia?
 
 Terima kasih.`;
   }
 
-  return `Halo NutriBox Daily, saya ingin menanyakan informasi layanan katering sehat dan jadwal menu untuk area pengiriman BSD / Tangsel.
+  return `Halo Nutribox Catering, saya ingin menanyakan informasi pemesanan katering acara (nasi kotak / prasmanan / snack box / tumpeng) untuk area BSD City & Jabodetabek.
 
 Terima kasih.`;
 }

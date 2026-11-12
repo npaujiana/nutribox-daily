@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { productsData } from '../../data/products';
 import { Product } from '../../types';
 import { ProductDetailModal } from './ProductDetailModal';
-import { Flame, Filter } from 'lucide-react';
+import { Filter, Users } from 'lucide-react';
 
 interface ProductCatalogProps {
   onOpenWhatsApp: (msg?: string) => void;
@@ -15,10 +15,10 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({ onOpenWhatsApp, 
 
   const filters = [
     { id: 'all', label: 'Semua menu' },
-    { id: 'balance', label: 'Daily Balance' },
-    { id: 'lean', label: 'Weight Management' },
-    { id: 'protein', label: 'High Protein' },
-    { id: 'active', label: 'Active Meal' },
+    { id: 'box', label: 'Nasi Kotak & Bento' },
+    { id: 'buffet', label: 'Prasmanan / Buffet' },
+    { id: 'snack', label: 'Snack Box & Kudapan' },
+    { id: 'tumpeng', label: 'Tumpeng & Hantaran' },
   ];
 
   const filteredProducts = activeFilter === 'all'
@@ -31,10 +31,10 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({ onOpenWhatsApp, 
         {/* Page Hero: Heading leads directly */}
         <div className="max-w-3xl mb-8 sm:mb-12 text-left">
           <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-forest tracking-tight">
-            Katalog makanan sehat bernutrisi terukur.
+            Katalog menu katering acara & syukuran.
           </h1>
           <p className="mt-4 text-base sm:text-lg text-ink-2 leading-relaxed">
-            Pilihan menu makan siang dengan informasi kalori dan makronutrisi transparan untuk menemani aktivitasmu di BSD City dan Tangerang Selatan.
+            Pilihan lengkap Nasi Kotak, Prasmanan, Snack Box, dan Tumpeng dengan cita rasa otentik bumbu rempah pilihan untuk berbagai momen istimewa di BSD City dan Jabodetabek.
           </p>
         </div>
 
@@ -81,10 +81,12 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({ onOpenWhatsApp, 
                       {product.badge}
                     </span>
                   )}
-                  <div className="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/95 border border-rule-subtle text-forest text-[11px] font-bold shadow-xs flex items-center gap-1 tabular-nums">
-                    <Flame className="w-3 h-3 text-terracotta" />
-                    <span>{product.caloriesRange}</span>
-                  </div>
+                  {product.portionInfo && (
+                    <div className="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/95 border border-rule-subtle text-forest text-[11px] font-bold shadow-xs flex items-center gap-1 tabular-nums">
+                      <Users className="w-3 h-3 text-leaf" />
+                      <span>{product.portionInfo}</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Content */}
@@ -99,18 +101,16 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({ onOpenWhatsApp, 
                     {product.description}
                   </p>
 
-                  {product.proteinEstimate && (
-                    <div className="mt-3 text-xs text-ink-2 font-medium">
-                      Estimasi protein: <span className="font-semibold text-forest tabular-nums">{product.proteinEstimate}</span>
-                    </div>
-                  )}
+                  <div className="mt-3 text-xs text-ink-2 font-medium">
+                    Ketentuan: <span className="font-semibold text-forest">{product.portionInfo || 'Porsi Standar'}</span>
+                  </div>
                 </div>
               </div>
 
               {/* Price & Action */}
               <div className="p-5 pt-0 border-t border-rule-subtle mt-2">
                 <div className="flex items-center justify-between mb-3 pt-3">
-                  <span className="text-xs text-ink-2">Harga satuan</span>
+                  <span className="text-xs text-ink-2">Estimasi harga</span>
                   <span className="font-display font-bold text-base text-forest tabular-nums">
                     {product.formattedPrice}
                   </span>
@@ -127,7 +127,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({ onOpenWhatsApp, 
                   <button
                     type="button"
                     onClick={() => {
-                      const msg = `Halo NutriBox Daily, saya ingin memesan menu ${product.name} (${product.formattedPrice}). Mohon informasi jadwal pengiriman untuk area saya.`;
+                      const msg = `Halo Nutribox Catering, saya ingin memesan menu ${product.name} (${product.formattedPrice}). Mohon informasi jadwal ketersediaan untuk area saya.`;
                       onOpenWhatsApp(msg);
                     }}
                     className="w-full py-2.5 px-3 rounded-lg bg-forest hover:bg-forest-hover active:scale-[0.99] disabled:opacity-50 text-white text-xs font-semibold text-center transition-colors shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
@@ -140,17 +140,17 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({ onOpenWhatsApp, 
           ))}
         </div>
 
-        {/* Subscription Upsell Banner */}
+        {/* Event Packages Upsell Banner */}
         <div className="mt-14 bg-forest text-white rounded-xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs text-left">
           <div className="space-y-2">
             <span className="text-xs font-semibold text-citrus block">
-              Ingin makan lebih teratur setiap hari kerja?
+              Merencanakan acara kantor, syukuran, atau gathering?
             </span>
             <h3 className="font-display font-bold text-xl sm:text-2xl text-white">
-              Cek Weekly Fit Plan (5 hari) dan Monthly Fit Plan (20 hari)
+              Cek Paket Acara Spesial (15 hingga 200+ Pax)
             </h3>
             <p className="text-xs sm:text-sm text-white/85 max-w-xl">
-              Dapatkan kemudahan pengantaran terjadwal otomatis setiap Senin sampai Jumat tanpa perlu memesan ulang tiap pagi.
+              Tersedia paket all-in lengkap meja buffet bercover, pemanas roll-top, perlengkapan makan, serta staf pramusaji terlatih.
             </p>
           </div>
           <button
@@ -158,14 +158,14 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({ onOpenWhatsApp, 
             onClick={() => onNavigate('subscription')}
             className="px-6 py-3.5 rounded-lg bg-white hover:bg-white/95 text-forest font-bold text-xs sm:text-sm shadow-sm active:scale-[0.99] disabled:opacity-50 transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white cursor-pointer"
           >
-            <span>Lihat paket langganan</span>
+            <span>Lihat paket acara</span>
           </button>
         </div>
 
-        {/* Nutrition Transparency Disclaimer */}
+        {/* Halal & Hygiene Disclaimer */}
         <div className="mt-8 p-4 rounded-lg bg-paper-2 border border-rule-subtle text-xs text-ink-2 text-center">
           <p>
-            *Seluruh estimasi nutrisi dihitung berdasarkan resep standar dan penimbangan gramatur bahan di dapur produksi BSD City. Pengolahan segar tanpa penambahan MSG.
+            *Seluruh sajian diolah dari bahan baku segar pilihan dengan sertifikasi 100% Halal dan standar kebersihan dapur komersial terpadu BSD City.
           </p>
         </div>
       </div>

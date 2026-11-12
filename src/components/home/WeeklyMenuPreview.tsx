@@ -22,10 +22,10 @@ export const WeeklyMenuPreview: React.FC<WeeklyMenuPreviewProps> = ({
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div>
             <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-forest tracking-tight">
-              Rotasi menu baru setiap minggu.
+              Rekomendasi menu acara pekan ini.
             </h2>
             <p className="mt-3 text-sm sm:text-base text-ink-2 max-w-xl">
-              Menu katering diperbarui setiap Jumat sore untuk minggu berikutnya. Berikut adalah contoh variasi rotasi menu harian NutriBox Daily.
+              Inspirasi pilihan menu lezat untuk rapat kerja kantor, syukuran keluarga, coffee break, hingga jamuan buffet tamu kehormatan.
             </p>
           </div>
           <button
@@ -34,7 +34,7 @@ export const WeeklyMenuPreview: React.FC<WeeklyMenuPreviewProps> = ({
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-paper border border-rule text-forest hover:bg-paper-2 active:scale-[0.99] disabled:opacity-50 text-xs sm:text-sm font-semibold transition-colors self-start md:self-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
           >
             <Calendar className="w-4 h-4 text-leaf" />
-            <span className="whitespace-nowrap">Lihat kalender lengkap</span>
+            <span className="whitespace-nowrap">Lihat jadwal & slot tanggal</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
@@ -83,9 +83,9 @@ export const WeeklyMenuPreview: React.FC<WeeklyMenuPreviewProps> = ({
             {/* Content Details */}
             <div className="lg:col-span-7 space-y-4 text-left">
               <div className="flex items-center gap-2 text-xs font-semibold text-leaf">
-                <span>Jadwal: {currentMenu.dayName}</span>
-                <span>,</span>
-                <span>Siap antar 10.30 sampai 11.45 WIB</span>
+                <span>Rekomendasi: {currentMenu.dayName}</span>
+                <span>•</span>
+                <span>Garansi Tiba H-1 Jam Acara</span>
               </div>
 
               <h3 className="font-display font-bold text-2xl sm:text-3xl text-forest">
@@ -96,29 +96,29 @@ export const WeeklyMenuPreview: React.FC<WeeklyMenuPreviewProps> = ({
                 {currentMenu.description}
               </p>
 
-              {/* Macro numbers in clear tabular display */}
-              <div className="grid grid-cols-4 gap-2 pt-2 border-y border-rule-subtle py-3 text-center tabular-nums">
+              {/* Event Specs Display */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 border-y border-rule-subtle py-3 text-center">
                 <div className="p-2 rounded-md bg-paper-2 border border-rule-subtle">
-                  <span className="text-[11px] text-ink-2 block">Energi</span>
-                  <span className="font-display font-bold text-sm text-forest">{currentMenu.calories} kcal</span>
+                  <span className="text-[11px] text-ink-2 block">Kategori</span>
+                  <span className="font-display font-bold text-xs text-forest">{currentMenu.categoryLabel}</span>
                 </div>
                 <div className="p-2 rounded-md bg-paper-2 border border-rule-subtle">
-                  <span className="text-[11px] text-ink-2 block">Protein</span>
-                  <span className="font-display font-bold text-sm text-forest">{currentMenu.protein}g</span>
+                  <span className="text-[11px] text-ink-2 block">Porsi</span>
+                  <span className="font-display font-bold text-xs text-forest">Kenyang Dewasa</span>
                 </div>
                 <div className="p-2 rounded-md bg-paper-2 border border-rule-subtle">
-                  <span className="text-[11px] text-ink-2 block">Karbo</span>
-                  <span className="font-display font-bold text-sm text-forest">{currentMenu.carbohydrates}g</span>
+                  <span className="text-[11px] text-ink-2 block">Ketentuan</span>
+                  <span className="font-display font-bold text-xs text-forest">{currentMenu.portionInfo?.split('•')[1]?.trim() || 'Min. 15 Pax'}</span>
                 </div>
                 <div className="p-2 rounded-md bg-paper-2 border border-rule-subtle">
-                  <span className="text-[11px] text-ink-2 block">Lemak</span>
-                  <span className="font-display font-bold text-sm text-forest">{currentMenu.fat}g</span>
+                  <span className="text-[11px] text-ink-2 block">Sertifikasi</span>
+                  <span className="font-display font-bold text-xs text-forest">100% Halal</span>
                 </div>
               </div>
 
               {/* Composition ingredients */}
               <div className="text-xs text-ink-2">
-                <span className="font-semibold text-forest">Komposisi lauk: </span>
+                <span className="font-semibold text-forest">Isian paket: </span>
                 {currentMenu.composition.join(', ')}.
               </div>
 
@@ -128,7 +128,7 @@ export const WeeklyMenuPreview: React.FC<WeeklyMenuPreviewProps> = ({
                   onClick={() => onSelectMenu(currentMenu)}
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-forest hover:bg-forest-hover active:scale-[0.99] disabled:opacity-50 text-white text-xs font-semibold shadow-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
                 >
-                  <span className="whitespace-nowrap">Detail menu & estimasi makro</span>
+                  <span className="whitespace-nowrap">Detail menu & isi paket</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>

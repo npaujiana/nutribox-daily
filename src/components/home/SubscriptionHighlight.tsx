@@ -12,30 +12,30 @@ export const SubscriptionHighlight: React.FC<SubscriptionHighlightProps> = ({ on
         {/* Header: Leading directly without generic kicker */}
         <div className="text-center max-w-2xl mx-auto mb-14">
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-forest tracking-tight">
-            Lebih teratur dengan paket langganan mingguan dan bulanan.
+            Pilihan paket katering sesuai skala acara Anda.
           </h2>
           <p className="mt-3 text-sm sm:text-base text-ink-2 leading-relaxed">
-            Bangun kebiasaan makan siang bergizi secara konsisten tanpa repot memesan setiap pagi. Pilih durasi yang sesuai ritme kerja Anda.
+            Dari konsumsi rapat kantor, syukuran keluarga, seminar, hingga pesta pernikahan. Temukan paket terstandar dengan efisiensi budget terbaik.
           </p>
         </div>
 
-        {/* 2 Plan Cards (Weekly Fit Plan & Monthly Fit Plan) */}
+        {/* 2 Plan Cards (Nasi Kotak vs Prasmanan Buffet) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
-          {/* Plan 1: Weekly Fit Plan */}
+          {/* Plan 1: Nasi Kotak Acara */}
           <div className="bg-paper border border-rule rounded-xl p-6 sm:p-8 flex flex-col justify-between shadow-xs">
             <div>
               <div className="flex items-center justify-between mb-4">
                 <span className="px-2.5 py-1 rounded-md bg-paper-2 border border-rule text-forest text-xs font-semibold">
-                  Paket 5 hari kerja
+                  Praktis & Higienis
                 </span>
-                <span className="text-xs text-ink-2">Senin sampai Jumat</span>
+                <span className="text-xs text-ink-2">Min. 15 Box</span>
               </div>
 
               <h3 className="font-display font-bold text-2xl text-forest">
-                Weekly Fit Plan
+                Paket Nasi Kotak Acara
               </h3>
               <p className="mt-2 text-xs sm:text-sm text-ink-2">
-                Solusi praktis 5 hari makan siang kerja dengan menu berbeda setiap hari.
+                Solusi ringkas untuk konsumsi rapat kerja, seminar kantor, pengajian, dan syukuran keluarga.
               </p>
 
               {/* Price Range */}
@@ -43,13 +43,13 @@ export const SubscriptionHighlight: React.FC<SubscriptionHighlightProps> = ({ on
                 <span className="text-xs text-ink-2 block">Mulai dari:</span>
                 <div className="flex items-baseline gap-2 mt-0.5 tabular-nums">
                   <span className="font-display font-extrabold text-3xl text-forest">
-                    Rp235.000
+                    Rp30.000
                   </span>
-                  <span className="text-xs text-ink-2">/ 5 box (Balance)</span>
+                  <span className="text-xs text-ink-2">/ box (Tier volume)</span>
                 </div>
                 <div className="mt-2 pt-2 border-t border-rule-subtle flex justify-between text-xs text-ink-2 tabular-nums">
-                  <span>Lean Plan: Rp250.000</span>
-                  <span>Protein Plan: Rp295.000</span>
+                  <span>Ayam Bakar: Rp35.000</span>
+                  <span>Liwet Komplit: Rp38.000</span>
                 </div>
               </div>
 
@@ -57,23 +57,23 @@ export const SubscriptionHighlight: React.FC<SubscriptionHighlightProps> = ({ on
               <ul className="space-y-3 text-xs sm:text-sm text-ink-2">
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-fresh shrink-0" />
-                  <span>5 porsi makan siang segar (1 porsi per hari kerja)</span>
+                  <span>Kemasan bento box bersekat tebal anti-tumpah & rapi</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-fresh shrink-0" />
-                  <span>5 variasi resep menu berbeda setiap harinya</span>
+                  <span>Pilihan menu ayam bakar madu, liwet daun pisang, atau bento</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-fresh shrink-0" />
-                  <span>Informasi kalori dan makronutrisi lengkap di setiap kemasan</span>
+                  <span>Lengkap sendok, garpu, tusuk gigi & tisu higienis</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-fresh shrink-0" />
-                  <span>Jadwal pengiriman teratur tiba 10.30 sampai 11.45 WIB</span>
+                  <span>Garansi pengantaran tiba H-1 jam sebelum acara dimulai</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-fresh shrink-0" />
-                  <span>Pilihan kategori Balance, Lean, Protein, atau Active</span>
+                  <span>Bebas kustom sambal dan tingkat kepedasan</span>
                 </li>
               </ul>
             </div>
@@ -84,26 +84,26 @@ export const SubscriptionHighlight: React.FC<SubscriptionHighlightProps> = ({ on
                 onClick={() => onNavigate('subscription')}
                 className="w-full py-3.5 px-4 rounded-lg border-2 border-forest text-forest font-semibold text-sm hover:bg-forest hover:text-white active:scale-[0.99] disabled:opacity-50 transition-colors text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
               >
-                <span>Pilih Weekly Fit Plan</span>
+                <span>Pilih Paket Nasi Kotak</span>
               </button>
             </div>
           </div>
 
-          {/* Plan 2: Monthly Fit Plan (Featured) */}
+          {/* Plan 2: Prasmanan Lengkap (Featured) */}
           <div className="bg-forest text-white rounded-xl p-6 sm:p-8 flex flex-col justify-between shadow-xs">
             <div>
               <div className="flex items-center justify-between mb-4">
                 <span className="px-2.5 py-1 rounded-md bg-citrus text-forest text-xs font-semibold">
-                  Paket 20 hari kerja
+                  All-In Service
                 </span>
-                <span className="text-xs text-sage">1 Bulan penuh</span>
+                <span className="text-xs text-sage">Min. 50 Pax</span>
               </div>
 
               <h3 className="font-display font-bold text-2xl text-white">
-                Monthly Fit Plan
+                Paket Prasmanan Lengkap
               </h3>
               <p className="mt-2 text-xs sm:text-sm text-sage">
-                Rekomendasi terbaik untuk konsistensi nutrisi sebulan penuh dengan fleksibilitas jadwal.
+                Layanan prasmanan bintang lima lengkap dengan meja buffet, chafing dish pemanas, dan staf pramusaji.
               </p>
 
               {/* Price Range */}
@@ -111,13 +111,13 @@ export const SubscriptionHighlight: React.FC<SubscriptionHighlightProps> = ({ on
                 <span className="text-xs text-sage block">Mulai dari:</span>
                 <div className="flex items-baseline gap-2 mt-0.5 tabular-nums">
                   <span className="font-display font-extrabold text-3xl text-white">
-                    Rp920.000
+                    Rp68.000
                   </span>
-                  <span className="text-xs text-sage">/ 20 box (Balance)</span>
+                  <span className="text-xs text-sage">/ pax (Tier volume)</span>
                 </div>
                 <div className="mt-2 pt-2 border-t border-white/10 flex justify-between text-xs text-sage tabular-nums">
-                  <span>Lean Plan: Rp980.000</span>
-                  <span>Protein Plan: Rp1.160.000</span>
+                  <span>Nusantara Gold: Rp75.000</span>
+                  <span>Asian Fusion: Rp89.000</span>
                 </div>
               </div>
 
@@ -125,23 +125,23 @@ export const SubscriptionHighlight: React.FC<SubscriptionHighlightProps> = ({ on
               <ul className="space-y-3 text-xs sm:text-sm text-white">
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-leaf shrink-0" />
-                  <span>20 porsi makan siang bergizi selama 4 minggu kerja</span>
+                  <span>6–7 variasi menu lauk daging, ayam, sup, sayur & hidangan penutup</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-leaf shrink-0" />
-                  <span>Rotasi penuh menu nusantara, Asia, dan western grill</span>
+                  <span>Set meja buffet bercover rapi dengan dekorasi pemanis</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-leaf shrink-0" />
-                  <span>Fleksibilitas pause jadwal (konfirmasi H-1 pukul 17.00 WIB)</span>
+                  <span>Pemanas roll-top stainless steel mewah (makanan selalu hangat)</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-leaf shrink-0" />
-                  <span>Prioritas slot pengiriman kurir pagi (10.30 sampai 11.45 WIB)</span>
+                  <span>Piring keramik, sendok-garpu, dan gelas tamu lengkap</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-leaf shrink-0" />
-                  <span>Dukungan konsultasi menu dan preferensi lauk via CS</span>
+                  <span>Staf pramusaji berseragam rapi yang standby selama acara</span>
                 </li>
               </ul>
             </div>
@@ -152,7 +152,7 @@ export const SubscriptionHighlight: React.FC<SubscriptionHighlightProps> = ({ on
                 onClick={() => onNavigate('subscription')}
                 className="w-full py-3.5 px-4 rounded-lg bg-white hover:bg-white/95 text-forest font-bold text-sm shadow-sm active:scale-[0.99] disabled:opacity-50 transition-colors text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white cursor-pointer"
               >
-                <span>Pilih Monthly Fit Plan</span>
+                <span>Pilih Paket Prasmanan</span>
               </button>
             </div>
           </div>
@@ -165,7 +165,7 @@ export const SubscriptionHighlight: React.FC<SubscriptionHighlightProps> = ({ on
             onClick={() => onNavigate('subscription')}
             className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-forest hover:text-fresh active:scale-[0.99] disabled:opacity-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest cursor-pointer"
           >
-            <span className="whitespace-nowrap">Bandingkan rincian paket langganan</span>
+            <span className="whitespace-nowrap">Buka kalkulator konfigurator paket acara</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>

@@ -4,38 +4,38 @@ export const ProductionQuality: React.FC = () => {
   const processes = [
     {
       num: '01',
-      title: 'Pemilihan bahan baku segar',
-      desc: 'Sayuran segar, beras pilihan, serta daging ayam dan ikan segar dipasok harian dari mitra lokal terpercaya.',
+      title: 'Bahan baku segar bersertifikasi Halal',
+      desc: 'Daging sapi, ayam segar, dan sayuran dipasok harian dari distributor resmi dengan jaminan 100% Halal.',
     },
     {
       num: '02',
-      title: 'Pencucian dan persiapan higienis',
-      desc: 'Seluruh sayuran dicuci bersih dengan air mengalir dan dipersiapkan dengan standar kebersihan dapur yang teratur.',
+      title: 'Pemisahan area pengolahan dapur',
+      desc: 'Area potong daging, sayuran, dan pastry dipisahkan secara ketat untuk mencegah kontaminasi silang dan menjaga higienitas.',
     },
     {
       num: '03',
-      title: 'Pengolahan tanpa penambahan MSG',
-      desc: 'Proses memanggang, mengukus, dan menumis menggunakan takaran minyak sehat minimal dan kaldu rempah alami.',
+      title: 'Racikan bumbu rempah alami',
+      desc: 'Menggunakan bumbu rempah tradisional segar yang dihaluskan langsung di hari H acara tanpa bahan pengawet sintetik.',
     },
     {
       num: '04',
-      title: 'Penimbangan porsi presisi',
-      desc: 'Setiap komponen protein, karbohidrat, dan sayuran ditimbang dengan timbangan digital agar porsi sesuai standar.',
+      title: 'Quality control rasa & gramatur',
+      desc: 'Setiap menu melewati uji rasa (taste check) oleh Head Chef dan penimbangan gramatur lauk utama agar porsi seragam.',
     },
     {
       num: '05',
-      title: 'Penghitungan nutrisi berbasis resep',
-      desc: 'Estimasi kalori dan makronutrisi ditabulasi berdasarkan gramatur bahan dan metode memasak yang telah diuji.',
+      title: 'Kemasan food-grade anti-tumpah',
+      desc: 'Bento box bersekat tebal menjaga lauk tidak saling bercampur, serta wadah sup bersegel rapat anti-tumpah.',
     },
     {
       num: '06',
-      title: 'Kemasan food-grade dan rapi',
-      desc: 'Meal box dikemas dalam wadah food-grade dengan saus atau dressing ditaruh terpisah untuk menjaga kesegaran.',
+      title: 'Pengantaran khusus dengan thermal bag',
+      desc: 'Kendaraan logistik dilengkapi boks insulasi suhu agar makanan tiba dalam kondisi hangat, wangi, dan segar.',
     },
     {
       num: '07',
-      title: 'Pemeriksaan akhir dan pengiriman kurir',
-      desc: 'Pemeriksaan kesesuaian pesanan sebelum kurir berangkat pukul 10.30 WIB untuk memastikan makanan tiba tepat waktu.',
+      title: 'Tim dekorasi & pramusaji standby',
+      desc: 'Untuk paket prasmanan, tim kami tiba H-2 jam untuk menata meja buffet, menyalakan pemanas, dan siap melayani tamu.',
     },
   ];
 
@@ -46,31 +46,31 @@ export const ProductionQuality: React.FC = () => {
           {/* Left Column: Heading & Visual Frame */}
           <div className="lg:col-span-5 space-y-6 text-left">
             <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-forest tracking-tight leading-tight">
-              Dipersiapkan dengan perhatian pada setiap gram bahan.
+              Kapasitas dapur besar dengan standar higienis tinggi.
             </h2>
             <p className="text-sm sm:text-base text-ink-2 leading-relaxed">
-              Mulai dari penimbangan bahan hingga pengemasan akhir, setiap langkah dirancang agar Anda menerima makanan yang tidak hanya bernutrisi terukur, tetapi juga terjaga higienitas dan kesegarannya.
+              Dapur pusat kami dirancang untuk memproduksi ratusan hingga ribuan porsi konsumsi acara per hari tanpa mengurangi konsistensi rasa lezat dan kebersihan setiap hidangan.
             </p>
 
             <div className="overflow-hidden rounded-xl border border-rule bg-paper shadow-xs">
               <div className="aspect-[4/3] overflow-hidden bg-paper-2">
                 <img
                   src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=80"
-                  alt="Ilustrasi persiapan dapur NutriBox Daily"
+                  alt="Fasilitas dapur katering acara BSD City"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
               <div className="p-3.5 bg-paper text-xs text-ink-2 border-t border-rule-subtle">
-                <span className="font-semibold text-forest block">Fasilitas dapur produksi BSD City</span>
-                <p className="mt-0.5 text-[11px]">Dapur komersial tertutup khusus produksi katering makan siang harian.</p>
+                <span className="font-semibold text-forest block">Central Production Kitchen BSD City</span>
+                <p className="mt-0.5 text-[11px]">Fasilitas dapur katering komersial berkapasitas 1.500+ porsi per hari.</p>
               </div>
             </div>
 
             <div className="p-4 rounded-lg bg-paper border border-rule text-xs text-ink-2">
-              <p className="font-semibold text-forest">Komitmen transparansi operasional:</p>
+              <p className="font-semibold text-forest">Jaminan kepuasan acara Anda:</p>
               <p className="mt-1 leading-relaxed">
-                Informasi proses operasional di atas mencerminkan tata laksana dapur kerja kami. Kami mengedepankan keterbukaan dan konsistensi resep tanpa klaim berlebihan.
+                Kami berkomitmen memberikan ketepatan waktu pengiriman, porsi yang mengenyangkan, serta kelezatan bumbu yang membuat tamu acara Anda berkesan.
               </p>
             </div>
           </div>

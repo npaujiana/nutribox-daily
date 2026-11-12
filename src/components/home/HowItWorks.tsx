@@ -4,23 +4,23 @@ export const HowItWorks: React.FC = () => {
   const steps = [
     {
       num: '01',
-      title: 'Pilih meal box',
-      description: 'Pilih kategori makanan yang sesuai kebutuhan nutrisimu: Daily Balance, Lean, Power Protein, atau Active Meal.',
+      title: 'Pilih Menu & Format',
+      description: 'Pilih jenis sajian yang Anda butuhkan: Nasi Kotak, Prasmanan (Buffet), Snack Box rapat, atau Tumpeng Syukuran.',
     },
     {
       num: '02',
-      title: 'Tentukan durasi',
-      description: 'Pilih durasi yang kamu inginkan: pesan harian (single box), paket mingguan (5 hari), atau paket bulanan (20 hari).',
+      title: 'Tentukan Jumlah Pax & Tanggal',
+      description: 'Tentukan perkiraan jumlah tamu undangan, tanggal acara, serta alamat pengantaran di kawasan BSD City & Jabodetabek.',
     },
     {
       num: '03',
-      title: 'Konfirmasi via WhatsApp',
-      description: 'Kirim rincian pesananmu ke WhatsApp. Tim CS NutriBox Daily mengonfirmasi ketersediaan menu, ongkir, dan verifikasi transfer.',
+      title: 'Konfirmasi & DP via WhatsApp',
+      description: 'Konsultasikan kustomisasi menu dengan tim kami. Cukup DP 50% untuk mengunci slot tanggal acara & jadwal produksi.',
     },
     {
       num: '04',
-      title: 'Siap dinikmati di meja',
-      description: 'Makanan dimasak segar di pagi hari dan dikirimkan tiba pukul 10.30 sampai 11.45 WIB, siap dinikmati sebelum jam istirahat.',
+      title: 'Tiba & Ditata di Lokasi Acara',
+      description: 'Makanan dimasak segar di hari H dan diantar tiba H-1 jam sebelum acara (termasuk set-up meja prasmanan & staf standby).',
     },
   ];
 
@@ -30,10 +30,10 @@ export const HowItWorks: React.FC = () => {
         {/* Header: Leading directly without generic kicker */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-forest tracking-tight">
-            Alur pemesanan praktis dalam 4 langkah.
+            Alur pemesanan katering acara dalam 4 langkah.
           </h2>
           <p className="mt-3 text-sm sm:text-base text-ink-2">
-            Proses pemesanan yang sederhana dan transparan, dirancang untuk menghemat waktu Anda.
+            Proses pemesanan yang mudah, jelas, dan transparan untuk memastikan acara Anda terselenggara sempurna.
           </p>
         </div>
 
@@ -67,8 +67,9 @@ export const HowItWorks: React.FC = () => {
         {/* Note on Pre-order cutoff */}
         <div className="mt-10 p-4 rounded-lg bg-paper-2 border border-rule max-w-2xl mx-auto text-center">
           <p className="text-xs text-ink-2">
-            <span className="font-bold text-forest">Catatan batas pre-order:</span> Konfirmasi pemesanan untuk pengiriman hari kerja berikutnya ditutup setiap{' '}
-            <span className="font-semibold text-forest">pukul 17.00 WIB (H-1)</span> agar penimbangan bahan baku segar dapat dialokasikan tepat waktu.
+            <span className="font-bold text-forest">Catatan waktu pemesanan:</span> Nasi Kotak & Snack Box minimal dipesan{' '}
+            <span className="font-semibold text-forest">H-1 (maks. 17.00 WIB)</span>. Untuk Prasmanan dan Tumpeng disarankan booking{' '}
+            <span className="font-semibold text-forest">H-3 hingga H-7</span> untuk memastikan ketersediaan set pemanas dan staf pramusaji.
           </p>
         </div>
       </div>
